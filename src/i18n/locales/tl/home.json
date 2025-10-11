@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "badge": "Live na Pagsubaybay sa Lindol",
+    "title": "Kaligtasan sa Lindol at Real-Time na Pagsubaybay",
+    "subtitle": "Real-time na pagsubaybay sa lindol mula sa mga opisyal na sanggunian. Mag-access ng live na seismic activity, mga gabay sa paghahanda, at mga emergency resources."
+  },
+  "features": {
+    "title": "Mga Pangunahing Feature",
+    "subtitle": "Mahahalagang tools para sa kamalayan sa lindol",
+    "realtime": {
+      "title": "Real-Time na Data",
+      "description": "Live na pagsubaybay sa lindol mula sa mga awtorisadong sanggunian tulad ng PHIVOLCS at USGS"
+    },
+    "interactive": {
+      "title": "Interactive na Mapa",
+      "description": "Visualize ang seismic activity sa buong mundo gamit ang detalyadong interactive maps"
+    },
+    "preparedness": {
+      "title": "Mga Gabay sa Paghahanda",
+      "description": "Komprehensibong mga alituntunin sa kaligtasan para bago, habang, at pagkatapos ng lindol"
+    }
+  },
+  "preparedness": {
+    "title": "Mga Gabay sa Paghahanda",
+    "subtitle": "Mahahalagang safety protocols para sa paghahanda at pagtugon sa lindol",
+    "before": {
+      "title": "Bago ang Lindol",
+      "description": "Ihanda ang inyong tahanan at pamilya para sa posibleng lindol"
+    },
+    "during": {
+      "title": "Habang may Lindol",
+      "description": "Alamin kung ano ang gagawin kapag nagsimulang umalog ang lupa"
+    },
+    "after": {
+      "title": "Pagkatapos ng Lindol",
+      "description": "Mga hakbang na dapat gawin kapag tumigil na ang pag-alog"
+    },
+    "kit": {
+      "title": "Emergency Kit",
+      "description": "Mahahalagang gamit na dapat mayroon ang bawat sambahayan"
+    }
+  },
+  "stats": {
+    "monitored": {
+      "value": "24/7",
+      "label": "Real-time na Pagsubaybay",
+      "description": "Tuloy-tuloy na pagsubaybay"
+    },
+    "daily": {
+      "value": "1000+",
+      "label": "Araw-araw na Lindol",
+      "description": "Pandaigdigang saklaw"
+    },
+    "coverage": {
+      "value": "Global",
+      "label": "Pandaigdigang Saklaw",
+      "description": "International network"
+    }
+  },
+  "cta": {
+    "title": "Mag-access ng Emergency Resources",
+    "subtitle": "Kumuha ng real-time na data sa lindol, mga safety protocols, at emergency contact information upang protektahan ang inyong sarili at komunidad."
+  }
+}
+

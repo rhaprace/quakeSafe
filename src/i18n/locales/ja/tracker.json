@@ -1,0 +1,32 @@
+{
+  "title": "ライブ地震トラッカー",
+  "subtitle": "リアルタイム地震活動監視",
+  "loading": "地震データを読み込んでいます...",
+  "error": "地震データの読み込みに失敗しました。もう一度お試しください。",
+  "noData": "地震データがありません。",
+  "filters": {
+    "timeRange": "時間範囲",
+    "magnitude": "マグニチュード",
+    "all": "すべての地震",
+    "hour": "過去1時間",
+    "day": "過去1日",
+    "week": "過去1週間",
+    "month": "過去1ヶ月"
+  },
+  "views": {
+    "map": "マップビュー",
+    "list": "リストビュー"
+  },
+  "card": {
+    "magnitude": "M",
+    "depth": "km深さ",
+    "tsunamiWarning": "津波警報",
+    "alert": "警報"
+  },
+  "stats": {
+    "total": "総イベント数",
+    "significant": "重要",
+    "recent": "過去1時間"
+  }
+}
+

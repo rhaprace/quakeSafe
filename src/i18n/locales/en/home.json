@@ -1,0 +1,67 @@
+{
+  "hero": {
+    "badge": "Live Earthquake Monitoring",
+    "title": "Earthquake Safety & Real-Time Monitoring",
+    "subtitle": "Real-time earthquake tracking and comprehensive preparedness resources to keep you and your community safe during seismic events."
+  },
+  "features": {
+    "title": "Core Features",
+    "subtitle": "Essential tools for earthquake awareness",
+    "realtime": {
+      "title": "Real-Time Data",
+      "description": "Live earthquake tracking from authoritative sources with automatic updates every 10 minutes."
+    },
+    "interactive": {
+      "title": "Interactive Map",
+      "description": "Visual earthquake locations with detailed magnitude, depth, and impact information."
+    },
+    "preparedness": {
+      "title": "Preparedness Guides",
+      "description": "Evidence-based safety protocols and emergency response procedures for all scenarios."
+    }
+  },
+  "preparedness": {
+    "title": "Earthquake Preparedness",
+    "subtitle": "Essential safety protocols",
+    "before": {
+      "title": "Before an Earthquake",
+      "description": "Prepare your home and family for potential earthquakes"
+    },
+    "during": {
+      "title": "During an Earthquake",
+      "description": "Know what to do when the ground starts shaking"
+    },
+    "after": {
+      "title": "After an Earthquake",
+      "description": "Steps to take once the shaking has stopped"
+    },
+    "kit": {
+      "title": "Emergency Kit",
+      "description": "Essential supplies every household should have"
+    }
+  },
+  "stats": {
+    "title": "Global Earthquake Activity",
+    "subtitle": "Understanding seismic patterns",
+    "daily": {
+      "value": "50+",
+      "label": "Daily Earthquakes",
+      "description": "Magnitude 3.0+"
+    },
+    "monitored": {
+      "value": "24/7",
+      "label": "Continuous Monitoring",
+      "description": "Real-time tracking"
+    },
+    "coverage": {
+      "value": "Global",
+      "label": "Worldwide Coverage",
+      "description": "All seismic regions"
+    }
+  },
+  "cta": {
+    "title": "Access Emergency Resources",
+    "subtitle": "Get real-time earthquake data, safety protocols, and emergency contact information to protect yourself and your community."
+  }
+}
+

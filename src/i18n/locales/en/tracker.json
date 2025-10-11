@@ -1,0 +1,32 @@
+{
+  "title": "Live Earthquake Tracker",
+  "subtitle": "Real-time seismic activity monitoring",
+  "loading": "Loading earthquake data...",
+  "error": "Failed to load earthquake data. Please try again.",
+  "noData": "No earthquake data available.",
+  "filters": {
+    "timeRange": "Time Range",
+    "magnitude": "Magnitude",
+    "all": "All Earthquakes",
+    "hour": "Past Hour",
+    "day": "Past Day",
+    "week": "Past Week",
+    "month": "Past Month"
+  },
+  "views": {
+    "map": "Map View",
+    "list": "List View"
+  },
+  "card": {
+    "magnitude": "M",
+    "depth": "km depth",
+    "tsunamiWarning": "Tsunami Warning",
+    "alert": "Alert"
+  },
+  "stats": {
+    "total": "Total Events",
+    "significant": "Significant",
+    "recent": "Last Hour"
+  }
+}
+

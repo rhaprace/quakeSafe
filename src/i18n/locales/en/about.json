@@ -1,0 +1,56 @@
+{
+  "title": "About QuakeSafe",
+  "subtitle": "Empowering communities with real-time earthquake information and comprehensive preparedness resources to build resilience against seismic hazards.",
+  "mission": {
+    "title": "Our Mission",
+    "text": "QuakeSafe aims to reduce the impact of earthquakes by providing accessible, real-time seismic information and evidence-based preparedness resources. We believe that informed communities are safer communities."
+  },
+  "features": {
+    "title": "What We Provide",
+    "subtitle": "Core features and capabilities",
+    "realtime": {
+      "title": "Real-time Data",
+      "description": "Live earthquake information from the U.S. Geological Survey (USGS)"
+    },
+    "safety": {
+      "title": "Safety First",
+      "description": "Comprehensive preparedness guides and safety information"
+    },
+    "community": {
+      "title": "Community Focus",
+      "description": "Resources for individuals, families, and communities"
+    },
+    "reliable": {
+      "title": "Reliable Sources",
+      "description": "Information from trusted government agencies and experts"
+    }
+  },
+  "dataSources": {
+    "title": "Data Sources & Acknowledgments",
+    "subtitle": "Information sources and partnerships"
+  },
+  "technical": {
+    "title": "Technical Information",
+    "subtitle": "Data specifications and accuracy details",
+    "updateFrequency": "Update Frequency",
+    "updateFrequencyValue": "Every 10 minutes",
+    "dataSource": "Data Source",
+    "dataSourceValue": "USGS Earthquake API",
+    "coverage": "Coverage",
+    "coverageValue": "Global seismic activity",
+    "accuracy": "Accuracy",
+    "accuracyValue": "Preliminary data subject to review"
+  },
+  "disclaimer": {
+    "title": "Important Disclaimer",
+    "text1": "QuakeSafe is an informational resource and should not be used as the sole source for emergency decision-making. Always follow official guidance from local authorities and emergency management agencies.",
+    "text2": "Earthquake data is provided by third-party sources and may contain delays or inaccuracies. For the most current and authoritative information, consult official government sources.",
+    "text3": "This application is not affiliated with or endorsed by any government agency. All data is publicly available and used for educational and informational purposes."
+  },
+  "contact": {
+    "title": "Stay Connected",
+    "text": "QuakeSafe is committed to improving earthquake preparedness for everyone. Your feedback helps us serve the community better.",
+    "footer": "For technical issues or feedback, please contact your local emergency management office or visit the USGS website for the most up-to-date information."
+  }
+}
+

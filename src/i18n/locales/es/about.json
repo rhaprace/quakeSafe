@@ -1,0 +1,56 @@
+{
+  "title": "Acerca de QuakeSafe",
+  "subtitle": "Empoderando comunidades con información sísmica en tiempo real y recursos completos de preparación para construir resiliencia contra peligros sísmicos.",
+  "mission": {
+    "title": "Nuestra Misión",
+    "text": "QuakeSafe tiene como objetivo reducir el impacto de los terremotos proporcionando información sísmica accesible en tiempo real y recursos de preparación basados en evidencia. Creemos que las comunidades informadas son comunidades más seguras."
+  },
+  "features": {
+    "title": "Lo Que Proporcionamos",
+    "subtitle": "Características y capacidades principales",
+    "realtime": {
+      "title": "Datos en Tiempo Real",
+      "description": "Información de terremotos en vivo del Servicio Geológico de EE. UU. (USGS)"
+    },
+    "safety": {
+      "title": "Seguridad Primero",
+      "description": "Guías completas de preparación e información de seguridad"
+    },
+    "community": {
+      "title": "Enfoque Comunitario",
+      "description": "Recursos para individuos, familias y comunidades"
+    },
+    "reliable": {
+      "title": "Fuentes Confiables",
+      "description": "Información de agencias gubernamentales y expertos de confianza"
+    }
+  },
+  "dataSources": {
+    "title": "Fuentes de Datos y Reconocimientos",
+    "subtitle": "Fuentes de información y asociaciones"
+  },
+  "technical": {
+    "title": "Información Técnica",
+    "subtitle": "Especificaciones de datos y detalles de precisión",
+    "updateFrequency": "Frecuencia de Actualización",
+    "updateFrequencyValue": "Cada 10 minutos",
+    "dataSource": "Fuente de Datos",
+    "dataSourceValue": "API de Terremotos USGS",
+    "coverage": "Cobertura",
+    "coverageValue": "Actividad sísmica global",
+    "accuracy": "Precisión",
+    "accuracyValue": "Datos preliminares sujetos a revisión"
+  },
+  "disclaimer": {
+    "title": "Descargo de Responsabilidad Importante",
+    "text1": "QuakeSafe es un recurso informativo y no debe usarse como la única fuente para la toma de decisiones de emergencia. Siempre siga la orientación oficial de las autoridades locales y las agencias de gestión de emergencias.",
+    "text2": "Los datos de terremotos son proporcionados por fuentes de terceros y pueden contener retrasos o inexactitudes. Para obtener la información más actual y autorizada, consulte fuentes gubernamentales oficiales.",
+    "text3": "Esta aplicación no está afiliada ni respaldada por ninguna agencia gubernamental. Todos los datos están disponibles públicamente y se utilizan con fines educativos e informativos."
+  },
+  "contact": {
+    "title": "Manténgase Conectado",
+    "text": "QuakeSafe está comprometido a mejorar la preparación ante terremotos para todos. Sus comentarios nos ayudan a servir mejor a la comunidad.",
+    "footer": "Para problemas técnicos o comentarios, comuníquese con su oficina local de gestión de emergencias o visite el sitio web de USGS para obtener la información más actualizada."
+  }
+}
+

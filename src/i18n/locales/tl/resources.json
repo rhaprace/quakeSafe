@@ -1,0 +1,77 @@
+{
+  "title": "Mga Emergency Resources",
+  "subtitle": "Mahahalagang contact numbers, organisasyon, at resources para sa paghahanda at pagtugon sa lindol",
+  "sections": {
+    "hotlines": {
+      "title": "Mga Emergency Hotline",
+      "subtitle": "Kritikal na contact numbers para sa agarang tulong"
+    },
+    "agencies": {
+      "title": "Mga Ahensya ng Gobyerno",
+      "subtitle": "Mga pambansang resources para sa disaster response at pagsubaybay"
+    },
+    "local": {
+      "title": "Mga Lokal na Community Resources",
+      "subtitle": "Makipag-ugnayan sa inyong lokal na emergency management office para sa mga tiyak na lokasyon",
+      "shelters": {
+        "category": "Mga Emergency Shelter",
+        "description": "Makipag-ugnayan sa inyong lokal na emergency management office para sa mga lokasyon ng shelter",
+        "items": {
+          "community": "Mga Community Center",
+          "schools": "Mga Paaralan (itinalagang shelter)",
+          "religious": "Mga Relihiyosong Organisasyon",
+          "redcross": "Mga Red Cross Shelter"
+        }
+      },
+      "healthcare": {
+        "category": "Mga Healthcare Facility",
+        "description": "Alamin ang lokasyon ng malapit na medical facilities",
+        "items": {
+          "hospitals": "Mga Ospital",
+          "urgent": "Mga Urgent Care Center",
+          "fire": "Mga Fire Station (EMT services)",
+          "community": "Mga Community Health Center"
+        }
+      },
+      "supply": {
+        "category": "Pamamahagi ng Supply",
+        "description": "Mga lokasyon para sa emergency supplies sa panahon ng sakuna",
+        "items": {
+          "eoc": "Mga Emergency Operations Center",
+          "fema": "Mga NDRRMC Disaster Relief Center",
+          "foodbanks": "Mga Lokal na Food Bank",
+          "distribution": "Mga Community Distribution Point"
+        }
+      }
+    },
+    "volunteer": {
+      "title": "Mga Volunteer Organizations",
+      "subtitle": "Mga non-profit na tumutulong sa disaster relief at community preparedness",
+      "cert": {
+        "name": "Community Emergency Response Team (CERT)",
+        "description": "Mag-training upang makatulong sa inyong komunidad sa panahon ng emergency",
+        "type": "training"
+      },
+      "redcross": {
+        "name": "Philippine Red Cross Volunteers",
+        "description": "Mga volunteer para sa disaster relief at emergency assistance",
+        "type": "relief"
+      },
+      "salvation": {
+        "name": "Salvation Army Emergency Disaster Services",
+        "description": "Disaster response at community support services",
+        "type": "relief"
+      },
+      "radio": {
+        "name": "Local Amateur Radio Emergency Services",
+        "description": "Communication support sa panahon ng emergency",
+        "type": "communication"
+      }
+    }
+  },
+  "disclaimer": {
+    "title": "Mahalagang Paalala",
+    "text": "Sa emergency, tawagan kaagad ang inyong lokal na emergency services. Huwag umasa lamang sa website na ito para sa emergency response. Ang data ay ibinibigay as-is at maaaring may pagkaantala o pagkakamali."
+  }
+}
+

@@ -1,0 +1,77 @@
+{
+  "title": "Recursos de Emergencia",
+  "subtitle": "Contactos esenciales, organizaciones y recursos para la preparación ante terremotos y respuesta de emergencia. Mantenga esta información fácilmente accesible.",
+  "sections": {
+    "hotlines": {
+      "title": "Líneas Directas de Emergencia",
+      "subtitle": "Números de contacto críticos para asistencia inmediata"
+    },
+    "agencies": {
+      "title": "Agencias Gubernamentales",
+      "subtitle": "Recursos federales para respuesta a desastres y monitoreo"
+    },
+    "local": {
+      "title": "Recursos Comunitarios Locales",
+      "subtitle": "Contacte a su oficina local de gestión de emergencias para ubicaciones específicas",
+      "shelters": {
+        "category": "Refugios de Emergencia",
+        "description": "Contacte a su oficina local de gestión de emergencias para ubicaciones de refugios",
+        "items": {
+          "community": "Centros Comunitarios",
+          "schools": "Escuelas (designadas como refugios)",
+          "religious": "Organizaciones Religiosas",
+          "redcross": "Refugios de la Cruz Roja"
+        }
+      },
+      "healthcare": {
+        "category": "Instalaciones de Salud",
+        "description": "Conozca la ubicación de las instalaciones médicas cercanas",
+        "items": {
+          "hospitals": "Hospitales",
+          "urgent": "Centros de Atención Urgente",
+          "fire": "Estaciones de Bomberos (servicios EMT)",
+          "community": "Centros de Salud Comunitarios"
+        }
+      },
+      "supply": {
+        "category": "Distribución de Suministros",
+        "description": "Ubicaciones para suministros de emergencia durante desastres",
+        "items": {
+          "eoc": "Centros de Operaciones de Emergencia",
+          "fema": "Centros de Ayuda en Desastres de FEMA",
+          "foodbanks": "Bancos de Alimentos Locales",
+          "distribution": "Puntos de Distribución Comunitarios"
+        }
+      }
+    },
+    "volunteer": {
+      "title": "Organizaciones de Voluntarios",
+      "subtitle": "Apoyo comunitario y programas de capacitación en respuesta de emergencia",
+      "cert": {
+        "name": "Equipo Comunitario de Respuesta a Emergencias (CERT)",
+        "description": "Capacítese para ayudar a su comunidad durante emergencias",
+        "type": "capacitación"
+      },
+      "redcross": {
+        "name": "Voluntarios de la Cruz Roja Americana",
+        "description": "Voluntarios de ayuda en desastres y asistencia de emergencia",
+        "type": "ayuda"
+      },
+      "salvation": {
+        "name": "Servicios de Emergencia y Desastres del Ejército de Salvación",
+        "description": "Respuesta a desastres y servicios de apoyo comunitario",
+        "type": "ayuda"
+      },
+      "radio": {
+        "name": "Servicios Locales de Radio Amateur de Emergencia",
+        "description": "Apoyo de comunicación durante emergencias",
+        "type": "comunicación"
+      }
+    }
+  },
+  "disclaimer": {
+    "title": "Información Importante",
+    "text": "Esta lista proporciona recursos generales y contactos de emergencia. Para información específica de ubicación, contacte a su oficina local de gestión de emergencias, ayuntamiento o gobierno del condado. Mantenga los números de emergencia locales fácilmente accesibles y considere programarlos en su teléfono."
+  }
+}
+

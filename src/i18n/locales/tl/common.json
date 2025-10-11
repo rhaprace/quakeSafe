@@ -1,0 +1,38 @@
+{
+  "appName": "QuakeSafe",
+  "navigation": {
+    "home": "Home",
+    "tracker": "Tracker",
+    "guides": "Gabay",
+    "resources": "Resources",
+    "about": "Tungkol"
+  },
+  "buttons": {
+    "visitWebsite": "Bisitahin ang Website",
+    "viewLiveTracker": "Tingnan ang Live Tracker",
+    "safetyGuidelines": "Mga Alituntunin sa Kaligtasan",
+    "emergencyResources": "Mga Emergency Resources",
+    "learnMore": "Matuto pa",
+    "refresh": "I-refresh",
+    "viewOnMap": "Tingnan sa Mapa",
+    "details": "Mga Detalye",
+    "clear": "I-clear"
+  },
+  "language": {
+    "select": "Wika",
+    "english": "English",
+    "spanish": "Español",
+    "japanese": "日本語",
+    "tagalog": "Tagalog"
+  },
+  "country": {
+    "select": "Bansa/Rehiyon",
+    "us": "Estados Unidos",
+    "japan": "Japan",
+    "mexico": "Mexico",
+    "chile": "Chile",
+    "indonesia": "Indonesia",
+    "philippines": "Pilipinas"
+  }
+}
+

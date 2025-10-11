@@ -1,0 +1,38 @@
+{
+  "appName": "QuakeSafe",
+  "navigation": {
+    "home": "Home",
+    "tracker": "Tracker",
+    "guides": "Guides",
+    "resources": "Resources",
+    "about": "About"
+  },
+  "buttons": {
+    "visitWebsite": "Visit Website",
+    "viewLiveTracker": "View Live Tracker",
+    "safetyGuidelines": "Safety Guidelines",
+    "emergencyResources": "Emergency Resources",
+    "learnMore": "Learn more",
+    "refresh": "Refresh",
+    "viewOnMap": "View on Map",
+    "details": "Details",
+    "clear": "Clear"
+  },
+  "language": {
+    "select": "Language",
+    "english": "English",
+    "spanish": "Español",
+    "japanese": "日本語",
+    "tagalog": "Tagalog"
+  },
+  "country": {
+    "select": "Country/Region",
+    "us": "United States",
+    "japan": "Japan",
+    "mexico": "Mexico",
+    "chile": "Chile",
+    "indonesia": "Indonesia",
+    "philippines": "Philippines"
+  }
+}
+

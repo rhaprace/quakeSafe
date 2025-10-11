@@ -1,0 +1,67 @@
+{
+  "hero": {
+    "badge": "Monitoreo Sísmico en Vivo",
+    "title": "Seguridad Sísmica y Monitoreo en Tiempo Real",
+    "subtitle": "Seguimiento de terremotos en tiempo real y recursos completos de preparación para mantener a usted y su comunidad seguros durante eventos sísmicos."
+  },
+  "features": {
+    "title": "Características Principales",
+    "subtitle": "Herramientas esenciales para la conciencia sísmica",
+    "realtime": {
+      "title": "Datos en Tiempo Real",
+      "description": "Seguimiento de terremotos en vivo desde fuentes autorizadas con actualizaciones automáticas cada 10 minutos."
+    },
+    "interactive": {
+      "title": "Mapa Interactivo",
+      "description": "Ubicaciones visuales de terremotos con información detallada de magnitud, profundidad e impacto."
+    },
+    "preparedness": {
+      "title": "Guías de Preparación",
+      "description": "Protocolos de seguridad basados en evidencia y procedimientos de respuesta de emergencia para todos los escenarios."
+    }
+  },
+  "preparedness": {
+    "title": "Preparación para Terremotos",
+    "subtitle": "Protocolos de seguridad esenciales",
+    "before": {
+      "title": "Antes de un Terremoto",
+      "description": "Prepare su hogar y familia para posibles terremotos"
+    },
+    "during": {
+      "title": "Durante un Terremoto",
+      "description": "Sepa qué hacer cuando el suelo comience a temblar"
+    },
+    "after": {
+      "title": "Después de un Terremoto",
+      "description": "Pasos a seguir una vez que el temblor haya cesado"
+    },
+    "kit": {
+      "title": "Kit de Emergencia",
+      "description": "Suministros esenciales que cada hogar debe tener"
+    }
+  },
+  "stats": {
+    "title": "Actividad Sísmica Global",
+    "subtitle": "Comprendiendo patrones sísmicos",
+    "daily": {
+      "value": "50+",
+      "label": "Terremotos Diarios",
+      "description": "Magnitud 3.0+"
+    },
+    "monitored": {
+      "value": "24/7",
+      "label": "Monitoreo Continuo",
+      "description": "Seguimiento en tiempo real"
+    },
+    "coverage": {
+      "value": "Global",
+      "label": "Cobertura Mundial",
+      "description": "Todas las regiones sísmicas"
+    }
+  },
+  "cta": {
+    "title": "Acceda a Recursos de Emergencia",
+    "subtitle": "Obtenga datos de terremotos en tiempo real, protocolos de seguridad e información de contacto de emergencia para protegerse a usted y a su comunidad."
+  }
+}
+

@@ -1,0 +1,32 @@
+{
+  "title": "Rastreador de Terremotos en Vivo",
+  "subtitle": "Monitoreo de actividad sísmica en tiempo real",
+  "loading": "Cargando datos de terremotos...",
+  "error": "Error al cargar datos de terremotos. Por favor, inténtelo de nuevo.",
+  "noData": "No hay datos de terremotos disponibles.",
+  "filters": {
+    "timeRange": "Rango de Tiempo",
+    "magnitude": "Magnitud",
+    "all": "Todos los Terremotos",
+    "hour": "Última Hora",
+    "day": "Último Día",
+    "week": "Última Semana",
+    "month": "Último Mes"
+  },
+  "views": {
+    "map": "Vista de Mapa",
+    "list": "Vista de Lista"
+  },
+  "card": {
+    "magnitude": "M",
+    "depth": "km de profundidad",
+    "tsunamiWarning": "Alerta de Tsunami",
+    "alert": "Alerta"
+  },
+  "stats": {
+    "total": "Eventos Totales",
+    "significant": "Significativos",
+    "recent": "Última Hora"
+  }
+}
+
