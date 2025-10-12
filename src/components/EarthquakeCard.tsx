@@ -17,9 +17,21 @@ const getMagnitudeBadgeColor = (magnitude: number) => {
   return 'bg-red-100 text-red-800 hover:bg-red-200';
 };
 
+const getDataSourceBadge = (net: string) => {
+  const sources: Record<string, { label: string; color: string }> = {
+    'usgs': { label: 'USGS', color: 'bg-blue-100 text-blue-800' },
+    'us': { label: 'USGS', color: 'bg-blue-100 text-blue-800' },
+    'geonet': { label: 'GeoNet', color: 'bg-purple-100 text-purple-800' },
+    'bmkg': { label: 'BMKG', color: 'bg-green-100 text-green-800' },
+  };
+
+  return sources[net.toLowerCase()] || { label: net.toUpperCase(), color: 'bg-gray-100 text-gray-800' };
+};
+
 const EarthquakeCard = ({ earthquake, onViewMap }: EarthquakeCardProps) => {
   const { properties, geometry } = earthquake;
   const [longitude, latitude, depth] = geometry.coordinates;
+  const dataSource = getDataSourceBadge(properties.net);
   
   const handleViewOnMap = () => {
     if (onViewMap) {
@@ -34,15 +46,23 @@ const EarthquakeCard = ({ earthquake, onViewMap }: EarthquakeCardProps) => {
   return (
     <Card className="w-full hover:shadow-md transition-shadow h-full flex flex-col">
       <CardHeader className="pb-3">
-        <div className="flex items-start justify-between">
-          <CardTitle className="text-lg leading-tight">
+        <div className="flex items-start justify-between gap-2">
+          <CardTitle className="text-lg leading-tight flex-1">
             {properties.place}
           </CardTitle>
-          <Badge
-            className={`ml-2 flex-shrink-0 ${getMagnitudeBadgeColor(properties.mag)}`}
-          >
-            M {properties.mag.toFixed(1)}
-          </Badge>
+          <div className="flex flex-col gap-1 items-end">
+            <Badge
+              className={`flex-shrink-0 ${getMagnitudeBadgeColor(properties.mag)}`}
+            >
+              M {properties.mag.toFixed(1)}
+            </Badge>
+            <Badge
+              variant="outline"
+              className={`flex-shrink-0 text-xs ${dataSource.color}`}
+            >
+              {dataSource.label}
+            </Badge>
+          </div>
         </div>
       </CardHeader>
 

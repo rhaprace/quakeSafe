@@ -3,12 +3,13 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Skeleton } from '@/components/ui/skeleton';
 import EarthquakeMap from '@/components/EarthquakeMap';
 import EarthquakeCard from '@/components/EarthquakeCard';
-import { useEarthquakeData, type EarthquakeFeature } from '@/hooks/useEarthquakeData';
-import { RefreshCw, MapPin, List } from 'lucide-react';
+import { type EarthquakeFeature } from '@/hooks/useEarthquakeData';
+import { useMultiSourceEarthquakeData } from '@/hooks/useMultiSourceEarthquakeData';
+import { RefreshCw, MapPin, List, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Tracker = () => {
-  const { data, isLoading, error, refetch, isRefetching } = useEarthquakeData();
+  const { data, isLoading, error, refetch, isRefetching } = useMultiSourceEarthquakeData();
   const [selectedEarthquake, setSelectedEarthquake] = useState<EarthquakeFeature | null>(null);
   const [view, setView] = useState<'map' | 'list' | 'both'>('both');
 
@@ -46,8 +47,9 @@ const Tracker = () => {
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Earthquake Tracker</h1>
-          <p className="text-muted-foreground mt-2">
-            Real-time earthquake monitoring from USGS
+          <p className="text-muted-foreground mt-2 flex items-center gap-2">
+            <Globe className="h-4 w-4" />
+            Multi-source data: USGS, GeoNet (NZ), BMKG (Indonesia)
             {data && (
               <span className="ml-2">
                 • {data.features.length} recent earthquakes

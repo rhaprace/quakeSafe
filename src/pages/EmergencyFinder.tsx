@@ -10,7 +10,7 @@ import {
 } from '@/data/philippines-regions';
 import 'leaflet/dist/leaflet.css';
 
-// Custom marker icon
+
 const emergencyIcon = new Icon({
   iconUrl: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNCIgZmlsbD0iI2VmNDQ0NCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjE4IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSI+8J+TjTwvdGV4dD48L3N2Zz4=',
   iconSize: [32, 32],
@@ -76,7 +76,7 @@ const EmergencyFinder = () => {
     <div className="h-screen flex flex-col">
       <div className="bg-background border-b px-4 py-4 lg:px-6">
         <div className="container mx-auto">
-          <h1 className="text-2xl font-bold mb-2">🏙️ Regional Emergency Finder</h1>
+          <h1 className="text-2xl font-bold mb-2">Regional Emergency Finder</h1>
           <p className="text-sm text-muted-foreground">
             Click on any city marker on the map to view local emergency resources
           </p>
@@ -146,10 +146,10 @@ const EmergencyFinder = () => {
               >
                 <Popup>
                   <div className="p-2">
-                    <div className="font-bold text-lg mb-1">{city.city}</div>
-                    <div className="text-sm text-muted-foreground mb-2">{city.province}</div>
-                    <div className="text-xs text-primary">
-                      Click for emergency contacts →
+                    <div className="font-bold text-base mb-1">{city.city}</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">{city.province}</div>
+                    <div className="text-xs text-blue-600 dark:text-blue-400 font-medium">
+                      Click marker for emergency contacts →
                     </div>
                   </div>
                 </Popup>

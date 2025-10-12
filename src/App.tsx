@@ -5,7 +5,9 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
-
+import OfflineIndicator from './components/OfflineIndicator';
+import PWAInstallPrompt from './components/PWAInstallPrompt';
+import PWAUpdatePrompt from './components/PWAUpdatePrompt';
 
 const Home = lazy(() => import('./pages/Home'));
 const Tracker = lazy(() => import('./pages/Tracker'));
@@ -13,6 +15,7 @@ const Guides = lazy(() => import('./pages/Guides'));
 const Resources = lazy(() => import('./pages/Resources'));
 const About = lazy(() => import('./pages/About'));
 const EmergencyFinder = lazy(() => import('./pages/EmergencyFinder'));
+const Offline = lazy(() => import('./pages/Offline'));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -58,9 +61,13 @@ function App() {
               <Route path="/resources" element={<Resources />} />
               <Route path="/emergency-finder" element={<EmergencyFinder />} />
               <Route path="/about" element={<About />} />
+              <Route path="/offline" element={<Offline />} />
             </Routes>
           </Suspense>
         </Layout>
+        <OfflineIndicator />
+        <PWAInstallPrompt />
+        <PWAUpdatePrompt />
       </Router>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
