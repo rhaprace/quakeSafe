@@ -1,0 +1,88 @@
+{
+  "title": "Patakaran sa Privacy",
+  "lastUpdated": "Huling Na-update",
+  "date": "Enero 2025",
+  "sections": {
+    "introduction": {
+      "title": "Panimula",
+      "content": "Ang QuakeSafe ('kami', 'amin', o 'sa amin') ay nakatuon sa pagprotekta ng inyong privacy. Ang Patakaran sa Privacy na ito ay nagpapaliwanag kung paano namin kinokolekta, ginagamit, at pinoprotektahan ang inyong impormasyon kapag ginagamit ninyo ang aming earthquake monitoring at preparedness application."
+    },
+    "collection": {
+      "title": "Impormasyong Kinokolekta Namin",
+      "automatic": {
+        "title": "Awtomatikong Nakolektang Impormasyon",
+        "items": [
+          "Uri ng device at operating system",
+          "Uri at bersyon ng browser",
+          "Mga istatistika at kagustuhan sa paggamit ng app",
+          "Wika at rehiyon na setting",
+          "Impormasyon ng time zone"
+        ]
+      },
+      "location": {
+        "title": "Impormasyon ng Lokasyon",
+        "content": "Maaari kaming humingi ng access sa inyong tinatayang lokasyon upang magbigay ng nauugnay na earthquake data at emergency resources para sa inyong lugar. Ang location data ay pinoproseso locally sa inyong device at hindi ipinapadala sa aming servers maliban kung piliin ninyong ibahagi ito."
+      }
+    },
+    "usage": {
+      "title": "Paano Namin Ginagamit ang Inyong Impormasyon",
+      "items": [
+        "Upang magbigay ng real-time earthquake monitoring at alerts",
+        "Upang magpakita ng nauugnay na safety guides at emergency resources",
+        "Upang i-customize ang karanasan sa app batay sa inyong lokasyon at kagustuhan",
+        "Upang mapabuti ang functionality at user experience ng app",
+        "Upang paganahin ang offline functionality sa pamamagitan ng service workers",
+        "Upang tandaan ang inyong mga setting at kagustuhan"
+      ]
+    },
+    "storage": {
+      "title": "Pag-iimbak at Seguridad ng Data",
+      "content": "Inuuna namin ang inyong privacy at seguridad ng data:",
+      "items": [
+        "Karamihan ng data ay naka-store locally sa inyong device gamit ang browser storage (localStorage, IndexedDB)",
+        "Hindi kami nag-maintain ng user accounts o kumukolekta ng personally identifiable information",
+        "Ang earthquake data ay kinukuha mula sa public APIs (USGS, GeoNet, BMKG) nang real-time",
+        "Ang inyong mga kagustuhan at setting ay naka-store lamang sa inyong device",
+        "Gumagamit kami ng HTTPS encryption para sa lahat ng data transmission"
+      ]
+    },
+    "thirdParty": {
+      "title": "Third-Party Services",
+      "content": "Ang QuakeSafe ay gumagamit ng mga sumusunod na third-party services upang magbigay ng earthquake data:",
+      "services": [
+        "USGS (United States Geological Survey) - Global earthquake data",
+        "GeoNet - New Zealand earthquake data",
+        "BMKG (Badan Meteorologi, Klimatologi, dan Geofisika) - Indonesia earthquake data",
+        "OpenStreetMap/Leaflet - Map visualization",
+        "PHIVOLCS - Philippines earthquake at volcano data"
+      ]
+    },
+    "rights": {
+      "title": "Inyong mga Karapatan at Pagpipilian",
+      "items": [
+        "Maaari ninyong i-clear ang lahat ng locally stored data anumang oras sa pamamagitan ng browser settings",
+        "Maaari ninyong tanggihan ang location access at gamitin pa rin ang karamihan ng features ng app",
+        "Maaari ninyong baguhin ang wika at rehiyon na kagustuhan anumang oras",
+        "Maaari ninyong gamitin ang app offline nang hindi nagbabahagi ng anumang data",
+        "Maaari ninyong i-uninstall ang PWA anumang oras upang alisin ang lahat ng local data"
+      ]
+    },
+    "cookies": {
+      "title": "Cookies at Local Storage",
+      "content": "Gumagamit kami ng browser local storage at service workers upang paganahin ang offline functionality at tandaan ang inyong mga kagustuhan. Hindi kami gumagamit ng tracking cookies o third-party advertising cookies. Maaari ninyong i-clear ang data na ito anumang oras sa pamamagitan ng browser settings."
+    },
+    "children": {
+      "title": "Privacy ng mga Bata",
+      "content": "Ang QuakeSafe ay dinisenyo para sa pangkalahatang audience at hindi sinasadyang kumukolekta ng impormasyon mula sa mga batang wala pang 13 taong gulang. Ang app ay hindi nangangailangan ng registration o personal na impormasyon mula sa sinumang user."
+    },
+    "changes": {
+      "title": "Mga Pagbabago sa Patakaran sa Privacy",
+      "content": "Maaari naming i-update ang Patakaran sa Privacy na ito paminsan-minsan. Aabisuhan namin ang mga user ng anumang mahalagang pagbabago sa pamamagitan ng pag-update ng 'Huling Na-update' na petsa. Ang patuloy na paggamit ng QuakeSafe pagkatapos ng mga pagbabago ay nangangahulugang pagtanggap sa na-update na patakaran."
+    },
+    "contact": {
+      "title": "Makipag-ugnayan sa Amin",
+      "content": "Kung mayroon kayong mga tanong o alalahanin tungkol sa Patakaran sa Privacy na ito o sa aming mga gawain sa data, mangyaring makipag-ugnayan sa amin sa pamamagitan ng About page o bisitahin ang aming GitHub repository."
+    }
+  }
+}
+

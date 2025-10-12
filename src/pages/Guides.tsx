@@ -1,10 +1,13 @@
-import { useState } from 'react';
-import { preparednessGuides } from '@/utils/guide';
+import { useState, useMemo } from 'react';
+import { getPreparednessGuides } from '@/utils/guide';
 import { useTranslation } from 'react-i18next';
 
 const Guides = () => {
   const { t } = useTranslation('guides');
   const [selectedGuide, setSelectedGuide] = useState('before');
+
+  const preparednessGuides = useMemo(() => getPreparednessGuides(t), [t]);
+
   const currentGuide =
     preparednessGuides.find((g) => g.id === selectedGuide) ||
     preparednessGuides[0];
@@ -12,7 +15,6 @@ const Guides = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-muted/30 via-background to-muted/20">
       <div className="container mx-auto px-4 py-8 lg:py-12">
-        {/* Header */}
         <div className="mb-8 lg:mb-12">
           <h1 className="text-3xl lg:text-4xl font-bold tracking-tight mb-3">
             {t('title')}
@@ -21,13 +23,10 @@ const Guides = () => {
             {t('subtitle')}
           </p>
         </div>
-
-        {/* Tab Navigation */}
         <div className="mb-8">
           <div className="border-b border-border overflow-x-auto">
             <nav className="flex gap-1 min-w-max" aria-label="Guide tabs">
               {preparednessGuides.map((guide) => {
-                const Icon = guide.icon;
                 const isActive = selectedGuide === guide.id;
                 return (
                   <button
@@ -39,7 +38,6 @@ const Guides = () => {
                         : 'border-transparent text-muted-foreground hover:text-foreground hover:border-muted-foreground/50'
                     }`}
                   >
-                    <Icon className="h-4 w-4" />
                     <span className="text-sm lg:text-base">{guide.title}</span>
                   </button>
                 );
@@ -47,8 +45,6 @@ const Guides = () => {
             </nav>
           </div>
         </div>
-
-        {/* Content Area */}
         <div className="mb-6">
           <div className="bg-background/50 backdrop-blur-sm rounded-lg border p-6 mb-6">
             <h2 className="text-2xl lg:text-3xl font-bold tracking-tight mb-2">
@@ -58,8 +54,6 @@ const Guides = () => {
               {currentGuide.description}
             </p>
           </div>
-
-          {/* Grid Layout for Content Sections */}
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {currentGuide.content.map((section, index) => (
               <div

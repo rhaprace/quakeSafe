@@ -1,11 +1,202 @@
 {
   "title": "Mga Gabay sa Lindol",
   "subtitle": "Matutunan kung paano manatiling ligtas bago, habang, at pagkatapos ng lindol.",
-  "sections": {
-    "before": "Bago ang Lindol",
-    "during": "Habang may Lindol",
-    "after": "Pagkatapos ng Lindol",
-    "tsunami": "Kahandaan sa Tsunami"
+  "guides": {
+    "before": {
+      "title": "Bago ang Lindol",
+      "description": "Ihanda ang inyong tahanan at pamilya para sa posibleng lindol",
+      "sections": {
+        "secureHome": {
+          "title": "Pag-secure ng Tahanan",
+          "points": [
+            "Ikabit ang mga bookcase, water heater, at mabibigat na kasangkapan sa dingding",
+            "Maglagay ng malakas na lock sa mga kabinet upang hindi mabuwal ang laman",
+            "Ilipat ang mabibigat na bagay sa mas mababang shelves",
+            "Ilagay ang mga basag na bagay sa saradong kabinet na may lock",
+            "Iwasan maglagay ng mabibigat na larawan at salamin malapit sa kama"
+          ]
+        },
+        "emergencyPlanning": {
+          "title": "Pagpaplano para sa Emergency",
+          "points": [
+            "Gumawa ng family emergency plan kasama ang meeting locations",
+            "Tukuyin ang ligtas na lugar sa bawat kwarto (sa ilalim ng matibay na mesa)",
+            "Magsanay ng 'Drop, Cover, and Hold On' drills",
+            "Panatilihing accessible ang emergency contact information",
+            "Magplano ng evacuation routes at magsanay"
+          ]
+        },
+        "importantDocuments": {
+          "title": "Mahahalagang Dokumento",
+          "points": [
+            "Magtago ng kopya ng mahahalagang dokumento sa waterproof container",
+            "I-store ang insurance policies, ID, at medical records",
+            "Kumuha ng litrato/video ng bahay at ari-arian para sa insurance",
+            "Magtago ng cash kung sakaling hindi gumana ang ATM"
+          ]
+        }
+      }
+    },
+    "during": {
+      "title": "Habang may Lindol",
+      "description": "Alamin kung ano ang gagawin kapag nagsimula ang lindol",
+      "sections": {
+        "dropCoverHold": {
+          "title": "Drop, Cover, at Hold On",
+          "points": [
+            "YUMUKO sa inyong mga kamay at tuhod kaagad",
+            "MAGTAGO sa ilalim ng matibay na mesa o lamesa kung meron",
+            "HUMAWAK sa inyong kanlungan at protektahan ang ulo/leeg gamit ang braso",
+            "Kung walang mesa, takpan ang ulo at leeg gamit ang mga braso",
+            "Manatili sa posisyon hanggang tumigil ang lindol"
+          ]
+        },
+        "indoors": {
+          "title": "Kung Nasa Loob Kayo",
+          "points": [
+            "Manatili sa loob - huwag tumakbo palabas habang may lindol",
+            "Huwag tumayo sa doorway (hindi mas ligtas kaysa ibang lugar)",
+            "Lumayo sa bintana, salamin, at mabibigat na bagay na maaaring mahulog",
+            "Huwag gumamit ng elevator",
+            "Kung nasa kama, manatili doon at takpan ang ulo ng unan"
+          ]
+        },
+        "outdoors": {
+          "title": "Kung Nasa Labas Kayo",
+          "points": [
+            "Lumayo sa mga gusali, power lines, at puno",
+            "Drop, cover, at hold on sa open area",
+            "Kung nagmamaneho, huminto nang ligtas at manatili sa loob ng sasakyan",
+            "Huwag huminto sa ilalim ng tulay o power lines"
+          ]
+        }
+      }
+    },
+    "after": {
+      "title": "Pagkatapos ng Lindol",
+      "description": "Mga hakbang na gagawin pagkatapos tumigil ang lindol",
+      "sections": {
+        "immediate": {
+          "title": "Agarang Aksyon",
+          "points": [
+            "Suriin ang sarili at iba para sa sugat - magbigay ng first aid kung trained",
+            "Suriin ang panganib: gas leak, electrical damage, structural damage",
+            "Patayin ang gas kung may amoy o suspetsa ng leak",
+            "Gumamit ng flashlight sa halip na kandila o posporo",
+            "Maghanda para sa aftershocks"
+          ]
+        },
+        "communication": {
+          "title": "Komunikasyon at Impormasyon",
+          "points": [
+            "Makinig sa emergency broadcasts para sa impormasyon",
+            "Gumamit ng text messages sa halip na tawag kung maaari",
+            "Suriin ang mga kapitbahay, lalo na ang matatanda o may kapansanan",
+            "Huwag gumamit ng kalsada maliban kung kinakailangan",
+            "Huwag pumasok sa sirang gusali"
+          ]
+        },
+        "ongoingSafety": {
+          "title": "Patuloy na Kaligtasan",
+          "points": [
+            "Suriin ang bahay para sa pinsala bago pumasok",
+            "Kumuha ng litrato ng pinsala para sa insurance claims",
+            "Magpasensya - maaaring abala ang emergency services",
+            "Magtipid ng battery power at tubig",
+            "Tumulong sa iba kung ligtas na gawin"
+          ]
+        }
+      }
+    },
+    "kit": {
+      "title": "Emergency Kit Essentials",
+      "description": "Mahahalagang supply na dapat mayroon ang bawat tahanan",
+      "sections": {
+        "waterFood": {
+          "title": "Tubig at Pagkain (3-araw na supply minimum)",
+          "points": [
+            "1 gallon ng tubig bawat tao bawat araw",
+            "Hindi nasisira na pagkain para sa bawat tao",
+            "Manual can opener at utility knife",
+            "Paper plates, cups, at plastic utensils",
+            "Baby formula at pagkain kung kailangan"
+          ]
+        },
+        "communication": {
+          "title": "Komunikasyon at Ilaw",
+          "points": [
+            "Battery-powered o hand-crank radio",
+            "NOAA Weather Radio na may tone alert",
+            "Flashlights (isa bawat tao)",
+            "Extra batteries para sa lahat ng devices",
+            "Cell phone chargers (solar o hand-crank)"
+          ]
+        },
+        "firstAid": {
+          "title": "First Aid at Kaligtasan",
+          "points": [
+            "Kumpletong first aid kit",
+            "Prescription medications (7-araw na supply)",
+            "Personal hygiene items",
+            "Emergency contact information",
+            "Local area maps",
+            "Whistle para sa pag-signal ng tulong"
+          ]
+        }
+      }
+    },
+    "building": {
+      "title": "Building Safety Tips",
+      "description": "Gawing mas earthquake-resistant ang inyong gusali",
+      "sections": {
+        "foundation": {
+          "title": "Foundation at Istruktura",
+          "points": [
+            "Siguraduhing nakakabit nang maayos ang bahay sa foundation",
+            "I-retrofit ang mga lumang gusali ayon sa seismic standards",
+            "Tukuyin at palakasin ang mga mahihinang bahagi ng istruktura",
+            "Isaalang-alang ang professional seismic retrofitting",
+            "Regular maintenance ng structural elements"
+          ]
+        },
+        "interior": {
+          "title": "Interior Safety Measures",
+          "points": [
+            "Maglagay ng automatic gas shut-off valves",
+            "Gumamit ng flexible connections para sa gas appliances",
+            "I-secure ang ceiling fans at light fixtures",
+            "Maglagay ng safety film sa malalaking bintana",
+            "Gumamit ng earthquake putty para sa maliliit na bagay"
+          ]
+        }
+      }
+    },
+    "community": {
+      "title": "Community Preparedness",
+      "description": "Magtulungan para sa earthquake readiness",
+      "sections": {
+        "neighborhood": {
+          "title": "Neighborhood Planning",
+          "points": [
+            "Mag-organisa ng neighborhood emergency response teams",
+            "Tukuyin ang mga kapitbahay na may special skills (medical, engineering)",
+            "Magplano para sa vulnerable community members (matatanda, may kapansanan)",
+            "Magtakda ng communication protocols sa mga kapitbahay",
+            "Magsanay ng community emergency drills"
+          ]
+        },
+        "resources": {
+          "title": "Community Resources",
+          "points": [
+            "Alamin ang lokasyon ng emergency shelters at hospitals",
+            "Tukuyin ang community emergency supply caches",
+            "Alamin ang local emergency response procedures",
+            "Lumahok sa community preparedness programs",
+            "Itaguyod ang improved building codes at safety measures"
+          ]
+        }
+      }
+    }
   }
 }
 

@@ -1,210 +1,116 @@
 import { Shield, AlertTriangle, Heart, Package, Home, Users } from 'lucide-react';
+import type { TFunction } from 'i18next';
 
-export const preparednessGuides = [
+export const getPreparednessGuides = (t: TFunction) => [
     {
       id: 'before',
-      title: 'Before an Earthquake',
+      title: t('guides:guides.before.title'),
       icon: Shield,
-      description: 'Prepare your home and family for potential earthquakes',
+      description: t('guides:guides.before.description'),
       content: [
         {
-          subtitle: 'Secure Your Home',
-          points: [
-            'Bolt bookcases, water heaters, and heavy furniture to walls',
-            'Install strong latches on cabinets to prevent contents from spilling',
-            'Move heavy items to lower shelves',
-            'Store breakable items in closed cabinets with latches',
-            'Hang heavy pictures and mirrors away from beds and seating areas',
-          ]
+          subtitle: t('guides:guides.before.sections.secureHome.title'),
+          points: t('guides:guides.before.sections.secureHome.points', { returnObjects: true }) as string[]
         },
         {
-          subtitle: 'Emergency Planning',
-          points: [
-            'Develop a family emergency plan with meeting locations',
-            'Identify safe spots in each room (under sturdy desks or against interior walls)',
-            'Practice "Drop, Cover, and Hold On" drills regularly',
-            'Keep emergency contact information easily accessible',
-            'Plan evacuation routes and practice them',
-          ]
+          subtitle: t('guides:guides.before.sections.emergencyPlanning.title'),
+          points: t('guides:guides.before.sections.emergencyPlanning.points', { returnObjects: true }) as string[]
         },
         {
-          subtitle: 'Important Documents',
-          points: [
-            'Keep copies of important documents in a waterproof container',
-            'Store insurance policies, identification, and medical records',
-            'Take photos/video of your home and possessions for insurance',
-            'Keep some cash on hand in case ATMs are not working',
-          ]
+          subtitle: t('guides:guides.before.sections.importantDocuments.title'),
+          points: t('guides:guides.before.sections.importantDocuments.points', { returnObjects: true }) as string[]
         }
       ]
     },
     {
       id: 'during',
-      title: 'During an Earthquake',
+      title: t('guides:guides.during.title'),
       icon: AlertTriangle,
-      description: 'Know what to do when the ground starts shaking',
+      description: t('guides:guides.during.description'),
       content: [
         {
-          subtitle: 'Drop, Cover, and Hold On',
-          points: [
-            'DROP to your hands and knees immediately',
-            'Take COVER under a sturdy desk or table if available',
-            'HOLD ON to your shelter and protect your head/neck with your arms',
-            'If no table, cover your head and neck with arms and hands',
-            'Stay in this position until shaking stops',
-          ]
+          subtitle: t('guides:guides.during.sections.dropCoverHold.title'),
+          points: t('guides:guides.during.sections.dropCoverHold.points', { returnObjects: true }) as string[]
         },
         {
-          subtitle: 'If You Are Indoors',
-          points: [
-            'Stay inside - do not run outside during shaking',
-            'Do not stand in doorways (not safer than other locations)',
-            'Stay away from windows, mirrors, and heavy objects that could fall',
-            'Do not use elevators',
-            'If in bed, stay there and cover your head with a pillow',
-          ]
+          subtitle: t('guides:guides.during.sections.indoors.title'),
+          points: t('guides:guides.during.sections.indoors.points', { returnObjects: true }) as string[]
         },
         {
-          subtitle: 'If You Are Outdoors',
-          points: [
-            'Move away from buildings, power lines, and trees',
-            'Drop, cover, and hold on in an open area',
-            'If driving, pull over safely and stay in the vehicle',
-            'Do not stop under bridges, overpasses, or power lines',
-          ]
+          subtitle: t('guides:guides.during.sections.outdoors.title'),
+          points: t('guides:guides.during.sections.outdoors.points', { returnObjects: true }) as string[]
         }
       ]
     },
     {
       id: 'after',
-      title: 'After an Earthquake',
+      title: t('guides:guides.after.title'),
       icon: Heart,
-      description: 'Steps to take once the shaking has stopped',
+      description: t('guides:guides.after.description'),
       content: [
         {
-          subtitle: 'Immediate Actions',
-          points: [
-            'Check yourself and others for injuries - provide first aid if trained',
-            'Check for hazards: gas leaks, electrical damage, structural damage',
-            'Turn off gas if you smell gas or suspect a leak',
-            'Use flashlights instead of candles or matches',
-            'Be prepared for aftershocks',
-          ]
+          subtitle: t('guides:guides.after.sections.immediate.title'),
+          points: t('guides:guides.after.sections.immediate.points', { returnObjects: true }) as string[]
         },
         {
-          subtitle: 'Communication and Information',
-          points: [
-            'Listen to emergency broadcasts for information and instructions',
-            'Use text messages instead of phone calls when possible',
-            'Check on neighbors, especially elderly or disabled individuals',
-            'Stay off the roads unless absolutely necessary',
-            'Do not enter damaged buildings',
-          ]
+          subtitle: t('guides:guides.after.sections.communication.title'),
+          points: t('guides:guides.after.sections.communication.points', { returnObjects: true }) as string[]
         },
         {
-          subtitle: 'Ongoing Safety',
-          points: [
-            'Inspect your home for damage before re-entering',
-            'Document damage with photos for insurance claims',
-            'Be patient - emergency services may be overwhelmed',
-            'Conserve battery power and water',
-            'Help others if you are able to do so safely',
-          ]
+          subtitle: t('guides:guides.after.sections.ongoingSafety.title'),
+          points: t('guides:guides.after.sections.ongoingSafety.points', { returnObjects: true }) as string[]
         }
       ]
     },
     {
       id: 'kit',
-      title: 'Emergency Kit Essentials',
+      title: t('guides:guides.kit.title'),
       icon: Package,
-      description: 'Essential supplies every household should have',
+      description: t('guides:guides.kit.description'),
       content: [
         {
-          subtitle: 'Water and Food (3-day supply minimum)',
-          points: [
-            '1 gallon of water per person per day',
-            'Non-perishable food for each person',
-            'Manual can opener and utility knife',
-            'Paper plates, cups, and plastic utensils',
-            'Baby formula and food if needed',
-          ]
+          subtitle: t('guides:guides.kit.sections.waterFood.title'),
+          points: t('guides:guides.kit.sections.waterFood.points', { returnObjects: true }) as string[]
         },
         {
-          subtitle: 'Communication and Light',
-          points: [
-            'Battery-powered or hand-crank radio',
-            'NOAA Weather Radio with tone alert',
-            'Flashlights (one per person)',
-            'Extra batteries for all devices',
-            'Cell phone chargers (solar or hand-crank)',
-          ]
+          subtitle: t('guides:guides.kit.sections.communication.title'),
+          points: t('guides:guides.kit.sections.communication.points', { returnObjects: true }) as string[]
         },
         {
-          subtitle: 'First Aid and Safety',
-          points: [
-            'Well-stocked first aid kit',
-            'Prescription medications (7-day supply)',
-            'Personal hygiene items',
-            'Emergency contact information',
-            'Local area maps',
-            'Whistle for signaling help',
-          ]
+          subtitle: t('guides:guides.kit.sections.firstAid.title'),
+          points: t('guides:guides.kit.sections.firstAid.points', { returnObjects: true }) as string[]
         }
       ]
     },
     {
       id: 'building',
-      title: 'Building Safety Tips',
+      title: t('guides:guides.building.title'),
       icon: Home,
-      description: 'Make your building more earthquake-resistant',
+      description: t('guides:guides.building.description'),
       content: [
         {
-          subtitle: 'Foundation and Structure',
-          points: [
-            'Ensure your home is properly bolted to its foundation',
-            'Retrofit older buildings to current seismic standards',
-            'Identify and reinforce weak points in your structure',
-            'Consider professional seismic retrofitting',
-            'Regular maintenance of structural elements',
-          ]
+          subtitle: t('guides:guides.building.sections.foundation.title'),
+          points: t('guides:guides.building.sections.foundation.points', { returnObjects: true }) as string[]
         },
         {
-          subtitle: 'Interior Safety Measures',
-          points: [
-            'Install automatic gas shut-off valves',
-            'Use flexible connections for gas appliances',
-            'Secure ceiling fans and light fixtures',
-            'Install safety film on large windows',
-            'Use earthquake putty for securing small objects',
-          ]
+          subtitle: t('guides:guides.building.sections.interior.title'),
+          points: t('guides:guides.building.sections.interior.points', { returnObjects: true }) as string[]
         }
       ]
     },
     {
       id: 'community',
-      title: 'Community Preparedness',
+      title: t('guides:guides.community.title'),
       icon: Users,
-      description: 'Working together for earthquake readiness',
+      description: t('guides:guides.community.description'),
       content: [
         {
-          subtitle: 'Neighborhood Planning',
-          points: [
-            'Organize neighborhood emergency response teams',
-            'Identify neighbors with special skills (medical, engineering)',
-            'Plan for vulnerable community members (elderly, disabled)',
-            'Establish communication protocols with neighbors',
-            'Practice community emergency drills',
-          ]
+          subtitle: t('guides:guides.community.sections.neighborhood.title'),
+          points: t('guides:guides.community.sections.neighborhood.points', { returnObjects: true }) as string[]
         },
         {
-          subtitle: 'Community Resources',
-          points: [
-            'Know locations of emergency shelters and hospitals',
-            'Identify community emergency supply caches',
-            'Learn about local emergency response procedures',
-            'Participate in community preparedness programs',
-            'Advocate for improved building codes and safety measures',
-          ]
+          subtitle: t('guides:guides.community.sections.resources.title'),
+          points: t('guides:guides.community.sections.resources.points', { returnObjects: true }) as string[]
         }
       ]
     }

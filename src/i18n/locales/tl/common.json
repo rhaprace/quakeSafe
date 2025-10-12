@@ -5,6 +5,7 @@
     "tracker": "Tracker",
     "guides": "Gabay",
     "resources": "Resources",
+    "emergencyFinder": "Emergency Finder",
     "about": "Tungkol"
   },
   "buttons": {
@@ -16,7 +17,8 @@
     "refresh": "I-refresh",
     "viewOnMap": "Tingnan sa Mapa",
     "details": "Mga Detalye",
-    "clear": "I-clear"
+    "clear": "I-clear",
+    "retry": "Subukan Muli"
   },
   "language": {
     "select": "Wika",
@@ -33,6 +35,14 @@
     "chile": "Chile",
     "indonesia": "Indonesia",
     "philippines": "Pilipinas"
+  },
+  "footer": {
+    "privacy": "Privacy",
+    "terms": "Mga Tuntunin",
+    "about": "Tungkol",
+    "rights": "Lahat ng karapatan ay nakalaan.",
+    "dataSource": "Earthquake data mula sa USGS, GeoNet, BMKG, at PHIVOLCS",
+    "developer": "Ginawa ni"
   }
 }
 

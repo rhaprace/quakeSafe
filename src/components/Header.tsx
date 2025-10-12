@@ -25,7 +25,7 @@ const Header = () => {
   const navItems = countryCode === 'PH'
     ? [
         ...baseNavItems,
-        { name: 'Emergency Finder', path: '/emergency-finder' },
+        { name: t('navigation.emergencyFinder'), path: '/emergency-finder' },
         { name: t('navigation.about'), path: '/about' },
       ]
     : [

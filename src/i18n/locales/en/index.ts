@@ -4,6 +4,8 @@ import guides from './guides.json';
 import resources from './resources.json';
 import about from './about.json';
 import tracker from './tracker.json';
+import privacy from './privacy.json';
+import terms from './terms.json';
 
 export default {
   common,
@@ -12,5 +14,7 @@ export default {
   resources,
   about,
   tracker,
+  privacy,
+  terms,
 };
 

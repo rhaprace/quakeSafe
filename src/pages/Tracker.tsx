@@ -7,8 +7,10 @@ import { type EarthquakeFeature } from '@/hooks/useEarthquakeData';
 import { useMultiSourceEarthquakeData } from '@/hooks/useMultiSourceEarthquakeData';
 import { RefreshCw, MapPin, List, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useTranslation } from 'react-i18next';
 
 const Tracker = () => {
+  const { t } = useTranslation('tracker');
   const { data, isLoading, error, refetch, isRefetching } = useMultiSourceEarthquakeData();
   const [selectedEarthquake, setSelectedEarthquake] = useState<EarthquakeFeature | null>(null);
   const [view, setView] = useState<'map' | 'list' | 'both'>('both');
@@ -27,14 +29,14 @@ const Tracker = () => {
       <div className="container mx-auto px-4 py-8">
         <Alert variant="destructive">
           <AlertDescription>
-            Failed to load earthquake data. Please check your internet connection and try again.
+            {t('error')}
             <Button
               onClick={handleRefresh}
               variant="outline"
               size="sm"
               className="ml-2"
             >
-              Retry
+              {t('common:buttons.retry')}
             </Button>
           </AlertDescription>
         </Alert>
@@ -46,13 +48,13 @@ const Tracker = () => {
     <div className="container mx-auto px-4 py-8">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">Earthquake Tracker</h1>
+          <h1 className="text-3xl font-bold tracking-tight">{t('title')}</h1>
           <p className="text-muted-foreground mt-2 flex items-center gap-2">
             <Globe className="h-4 w-4" />
-            Multi-source data: USGS, GeoNet (NZ), BMKG (Indonesia)
+            {t('multiSource')}
             {data && (
               <span className="ml-2">
-                • {data.features.length} recent earthquakes
+                • {data.features.length} {t('recentCount')}
               </span>
             )}
           </p>
@@ -72,7 +74,7 @@ const Tracker = () => {
               size="sm"
               onClick={() => setView('both')}
             >
-              Both
+              {t('views.both')}
             </Button>
             <Button
               variant={view === 'list' ? 'default' : 'ghost'}
@@ -89,7 +91,7 @@ const Tracker = () => {
             disabled={isRefetching}
           >
             <RefreshCw className={`h-4 w-4 ${isRefetching ? 'animate-spin' : ''}`} />
-            <span className="ml-2 hidden sm:inline">Refresh</span>
+            <span className="ml-2 hidden sm:inline">{t('common:buttons.refresh')}</span>
           </Button>
         </div>
       </div>
@@ -116,7 +118,7 @@ const Tracker = () => {
                 <div className="mt-4 p-4 bg-muted rounded-lg">
                   <div className="flex justify-between items-start">
                     <div>
-                      <h3 className="font-semibold">Selected Earthquake</h3>
+                      <h3 className="font-semibold">{t('selectedEarthquake')}</h3>
                       <p className="text-sm text-muted-foreground">
                         {selectedEarthquake.properties.place}
                       </p>
@@ -126,7 +128,7 @@ const Tracker = () => {
                       size="sm"
                       onClick={() => setSelectedEarthquake(null)}
                     >
-                      Clear
+                      {t('common:buttons.clear')}
                     </Button>
                   </div>
                 </div>
@@ -135,11 +137,11 @@ const Tracker = () => {
           )}
           {(view === 'list' || view === 'both') && (
             <div>
-              <h2 className="text-xl font-semibold mb-4">Recent Earthquakes</h2>
+              <h2 className="text-xl font-semibold mb-4">{t('recentEarthquakes')}</h2>
               {data.features.length === 0 ? (
                 <Alert>
                   <AlertDescription>
-                    No earthquakes found for the current criteria.
+                    {t('noEarthquakesFound')}
                   </AlertDescription>
                 </Alert>
               ) : (

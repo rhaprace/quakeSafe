@@ -1,0 +1,86 @@
+{
+  "title": "Terms of Service",
+  "lastUpdated": "Last Updated",
+  "date": "January 2025",
+  "sections": {
+    "introduction": {
+      "title": "Introduction",
+      "content": "Welcome to QuakeSafe. These Terms of Service ('Terms') govern your use of the QuakeSafe application. By accessing or using QuakeSafe, you agree to be bound by these Terms."
+    },
+    "acceptance": {
+      "title": "Acceptance of Terms",
+      "content": "By using QuakeSafe, you acknowledge that you have read, understood, and agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms, please do not use the application."
+    },
+    "service": {
+      "title": "Service Description",
+      "content": "QuakeSafe is a free, open-source Progressive Web Application (PWA) that provides:",
+      "features": [
+        "Real-time earthquake monitoring from multiple authoritative sources",
+        "Interactive maps showing recent seismic activity",
+        "Safety guides and emergency preparedness information",
+        "Emergency resource locators for specific regions",
+        "Offline functionality for critical safety information",
+        "Multi-language support"
+      ]
+    },
+    "disclaimer": {
+      "title": "Important Disclaimer",
+      "warning": "QUAKESAFE IS AN INFORMATIONAL TOOL ONLY AND SHOULD NOT BE YOUR SOLE SOURCE FOR EMERGENCY INFORMATION.",
+      "items": [
+        "QuakeSafe is NOT an official emergency alert system",
+        "Data may be delayed, incomplete, or inaccurate",
+        "Always follow official emergency services and local authorities",
+        "We are not responsible for any decisions made based on information from this app",
+        "In case of emergency, contact local emergency services immediately (911, 112, etc.)",
+        "This app does not replace official earthquake early warning systems"
+      ]
+    },
+    "responsibilities": {
+      "title": "User Responsibilities",
+      "items": [
+        "Use QuakeSafe as a supplementary information tool only",
+        "Verify critical information with official sources",
+        "Follow guidance from local emergency management authorities",
+        "Maintain your own emergency preparedness plans",
+        "Ensure you have access to official emergency alert systems",
+        "Use the app responsibly and not for malicious purposes"
+      ]
+    },
+    "intellectual": {
+      "title": "Intellectual Property",
+      "content": "QuakeSafe is open-source software. The application code is available under an open-source license. Earthquake data is provided by third-party sources (USGS, GeoNet, BMKG, PHIVOLCS) and remains the property of those organizations. Map data is provided by OpenStreetMap contributors."
+    },
+    "thirdPartyData": {
+      "title": "Third-Party Data Sources",
+      "content": "QuakeSafe aggregates data from multiple authoritative sources:",
+      "sources": [
+        "USGS (United States Geological Survey) - Subject to USGS terms",
+        "GeoNet (New Zealand) - Subject to GeoNet terms",
+        "BMKG (Indonesia) - Subject to BMKG terms",
+        "PHIVOLCS (Philippines) - Subject to PHIVOLCS terms",
+        "OpenStreetMap - Subject to ODbL license"
+      ]
+    },
+    "liability": {
+      "title": "Limitation of Liability",
+      "content": "TO THE MAXIMUM EXTENT PERMITTED BY LAW, QUAKESAFE AND ITS DEVELOPERS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES RESULTING FROM YOUR USE OF THE SERVICE."
+    },
+    "availability": {
+      "title": "Service Availability",
+      "content": "We strive to keep QuakeSafe available 24/7, but we do not guarantee uninterrupted access. The service may be temporarily unavailable due to maintenance, updates, or factors beyond our control. Third-party data sources may also experience outages."
+    },
+    "modifications": {
+      "title": "Modifications to Service and Terms",
+      "content": "We reserve the right to modify or discontinue QuakeSafe at any time without notice. We may also update these Terms from time to time. Continued use of the service after changes constitutes acceptance of the modified Terms."
+    },
+    "law": {
+      "title": "Governing Law",
+      "content": "These Terms shall be governed by and construed in accordance with applicable laws. Any disputes arising from these Terms or your use of QuakeSafe shall be resolved in accordance with the laws of your jurisdiction."
+    },
+    "contact": {
+      "title": "Contact Information",
+      "content": "For questions about these Terms of Service, please visit our About page or contact us through our GitHub repository."
+    }
+  }
+}
+

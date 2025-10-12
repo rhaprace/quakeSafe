@@ -1,0 +1,86 @@
+{
+  "title": "Mga Tuntunin ng Serbisyo",
+  "lastUpdated": "Huling Na-update",
+  "date": "Enero 2025",
+  "sections": {
+    "introduction": {
+      "title": "Panimula",
+      "content": "Maligayang pagdating sa QuakeSafe. Ang Mga Tuntunin ng Serbisyo ('Tuntunin') na ito ay namamahala sa inyong paggamit ng QuakeSafe application. Sa pag-access o paggamit ng QuakeSafe, sumasang-ayon kayo na sumunod sa mga Tuntuning ito."
+    },
+    "acceptance": {
+      "title": "Pagtanggap ng mga Tuntunin",
+      "content": "Sa paggamit ng QuakeSafe, kinikilala ninyo na nabasa, naintindihan, at sumasang-ayon kayong sumunod sa mga Tuntuning ito at sa aming Patakaran sa Privacy. Kung hindi kayo sumasang-ayon sa mga Tuntuning ito, mangyaring huwag gamitin ang application."
+    },
+    "service": {
+      "title": "Paglalarawan ng Serbisyo",
+      "content": "Ang QuakeSafe ay isang libreng, open-source Progressive Web Application (PWA) na nagbibigay ng:",
+      "features": [
+        "Real-time earthquake monitoring mula sa maraming authoritative sources",
+        "Interactive maps na nagpapakita ng kamakailang seismic activity",
+        "Safety guides at emergency preparedness information",
+        "Emergency resource locators para sa mga partikular na rehiyon",
+        "Offline functionality para sa kritikal na safety information",
+        "Multi-language support"
+      ]
+    },
+    "disclaimer": {
+      "title": "Mahalagang Disclaimer",
+      "warning": "ANG QUAKESAFE AY ISANG INFORMATIONAL TOOL LAMANG AT HINDI DAPAT ANG INYONG TANGING PINAGKUKUNAN NG EMERGENCY INFORMATION.",
+      "items": [
+        "Ang QuakeSafe ay HINDI opisyal na emergency alert system",
+        "Ang data ay maaaring delayed, hindi kumpleto, o hindi tumpak",
+        "Laging sundin ang opisyal na emergency services at local authorities",
+        "Hindi kami responsable sa anumang desisyon na ginawa batay sa impormasyon mula sa app na ito",
+        "Sa kaso ng emergency, makipag-ugnayan kaagad sa local emergency services (911, 112, atbp.)",
+        "Ang app na ito ay hindi pumapalit sa opisyal na earthquake early warning systems"
+      ]
+    },
+    "responsibilities": {
+      "title": "Mga Responsibilidad ng User",
+      "items": [
+        "Gamitin ang QuakeSafe bilang supplementary information tool lamang",
+        "I-verify ang kritikal na impormasyon sa opisyal na sources",
+        "Sundin ang gabay mula sa local emergency management authorities",
+        "Panatilihin ang inyong sariling emergency preparedness plans",
+        "Siguraduhing mayroon kayong access sa opisyal na emergency alert systems",
+        "Gamitin ang app nang responsable at hindi para sa masasamang layunin"
+      ]
+    },
+    "intellectual": {
+      "title": "Intellectual Property",
+      "content": "Ang QuakeSafe ay open-source software. Ang application code ay available sa ilalim ng open-source license. Ang earthquake data ay ibinibigay ng third-party sources (USGS, GeoNet, BMKG, PHIVOLCS) at nananatiling pag-aari ng mga organisasyong iyon. Ang map data ay ibinibigay ng OpenStreetMap contributors."
+    },
+    "thirdPartyData": {
+      "title": "Third-Party Data Sources",
+      "content": "Ang QuakeSafe ay nag-aggregate ng data mula sa maraming authoritative sources:",
+      "sources": [
+        "USGS (United States Geological Survey) - Saklaw ng USGS terms",
+        "GeoNet (New Zealand) - Saklaw ng GeoNet terms",
+        "BMKG (Indonesia) - Saklaw ng BMKG terms",
+        "PHIVOLCS (Philippines) - Saklaw ng PHIVOLCS terms",
+        "OpenStreetMap - Saklaw ng ODbL license"
+      ]
+    },
+    "liability": {
+      "title": "Limitasyon ng Pananagutan",
+      "content": "SA MAXIMUM EXTENT NA PINAPAYAGAN NG BATAS, ANG QUAKESAFE AT ANG MGA DEVELOPERS NITO AY HINDI MANANAGOT PARA SA ANUMANG INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, O PUNITIVE DAMAGES, O ANUMANG PAGKAWALA NG KITA O REVENUE, MAGING DIREKTA O HINDI DIREKTANG NATAMO, O ANUMANG PAGKAWALA NG DATA, PAGGAMIT, GOODWILL, O IBANG INTANGIBLE LOSSES NA RESULTA NG INYONG PAGGAMIT NG SERBISYO."
+    },
+    "availability": {
+      "title": "Availability ng Serbisyo",
+      "content": "Nagsusumikap kaming panatilihing available ang QuakeSafe 24/7, ngunit hindi namin ginagarantiya ang walang tigil na access. Ang serbisyo ay maaaring pansamantalang hindi available dahil sa maintenance, updates, o mga kadahilanang lampas sa aming kontrol. Ang third-party data sources ay maaari ring makaranas ng outages."
+    },
+    "modifications": {
+      "title": "Mga Pagbabago sa Serbisyo at Tuntunin",
+      "content": "Nakalaan sa amin ang karapatang baguhin o ihinto ang QuakeSafe anumang oras nang walang abiso. Maaari din naming i-update ang mga Tuntuning ito paminsan-minsan. Ang patuloy na paggamit ng serbisyo pagkatapos ng mga pagbabago ay nangangahulugang pagtanggap sa binagong Tuntunin."
+    },
+    "law": {
+      "title": "Governing Law",
+      "content": "Ang mga Tuntuning ito ay pamumunuan at bibigyang-kahulugan alinsunod sa naaangkop na mga batas. Ang anumang alitan na nagmumula sa mga Tuntuning ito o sa inyong paggamit ng QuakeSafe ay lulutasin alinsunod sa mga batas ng inyong hurisdiksyon."
+    },
+    "contact": {
+      "title": "Impormasyon sa Pakikipag-ugnayan",
+      "content": "Para sa mga tanong tungkol sa Mga Tuntunin ng Serbisyo na ito, mangyaring bisitahin ang aming About page o makipag-ugnayan sa amin sa pamamagitan ng aming GitHub repository."
+    }
+  }
+}
+

@@ -15,6 +15,8 @@ const Guides = lazy(() => import('./pages/Guides'));
 const Resources = lazy(() => import('./pages/Resources'));
 const About = lazy(() => import('./pages/About'));
 const EmergencyFinder = lazy(() => import('./pages/EmergencyFinder'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+const Terms = lazy(() => import('./pages/Terms'));
 const Offline = lazy(() => import('./pages/Offline'));
 
 const queryClient = new QueryClient({
@@ -61,6 +63,8 @@ function App() {
               <Route path="/resources" element={<Resources />} />
               <Route path="/emergency-finder" element={<EmergencyFinder />} />
               <Route path="/about" element={<About />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
               <Route path="/offline" element={<Offline />} />
             </Routes>
           </Suspense>

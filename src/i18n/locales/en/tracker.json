@@ -1,9 +1,14 @@
 {
-  "title": "Live Earthquake Tracker",
+  "title": "Earthquake Tracker",
   "subtitle": "Real-time seismic activity monitoring",
+  "multiSource": "Multi-source data: USGS, GeoNet (NZ), BMKG (Indonesia)",
+  "recentCount": "recent earthquakes",
+  "recentEarthquakes": "Recent Earthquakes",
+  "selectedEarthquake": "Selected Earthquake",
   "loading": "Loading earthquake data...",
-  "error": "Failed to load earthquake data. Please try again.",
+  "error": "Failed to load earthquake data. Please check your internet connection and try again.",
   "noData": "No earthquake data available.",
+  "noEarthquakesFound": "No earthquakes found for the current criteria.",
   "filters": {
     "timeRange": "Time Range",
     "magnitude": "Magnitude",
@@ -14,8 +19,9 @@
     "month": "Past Month"
   },
   "views": {
-    "map": "Map View",
-    "list": "List View"
+    "map": "Map",
+    "list": "List",
+    "both": "Both"
   },
   "card": {
     "magnitude": "M",

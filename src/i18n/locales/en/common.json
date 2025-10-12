@@ -5,6 +5,7 @@
     "tracker": "Tracker",
     "guides": "Guides",
     "resources": "Resources",
+    "emergencyFinder": "Emergency Finder",
     "about": "About"
   },
   "buttons": {
@@ -16,7 +17,8 @@
     "refresh": "Refresh",
     "viewOnMap": "View on Map",
     "details": "Details",
-    "clear": "Clear"
+    "clear": "Clear",
+    "retry": "Retry"
   },
   "language": {
     "select": "Language",
@@ -33,6 +35,14 @@
     "chile": "Chile",
     "indonesia": "Indonesia",
     "philippines": "Philippines"
+  },
+  "footer": {
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "about": "About",
+    "rights": "All rights reserved.",
+    "dataSource": "Earthquake data provided by USGS, GeoNet, BMKG, and PHIVOLCS",
+    "developer": "Developed by"
   }
 }
 
