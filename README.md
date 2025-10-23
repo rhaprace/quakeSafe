@@ -1,15 +1,15 @@
-# QuakeSafe 🌋
+# QuakeSafe 
 
 A comprehensive earthquake monitoring and preparedness web application built with React, TypeScript, and modern web technologies.
 
 ## Features
 
-- **🌍 Real-time Earthquake Tracking**: Live earthquake data from the U.S. Geological Survey (USGS)
-- **🗺️ Interactive Map**: Visual earthquake monitoring with Leaflet maps
-- **📚 Preparedness Guides**: Comprehensive earthquake safety information
-- **🆘 Emergency Resources**: Quick access to emergency contacts and resources
-- **🌙 Dark Mode Support**: Beautiful light and dark theme toggle
-- **📱 Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
+- ** Real-time Earthquake Tracking**: Live earthquake data from the U.S. Geological Survey (USGS)
+- ** Interactive Map**: Visual earthquake monitoring with Leaflet maps
+- ** Preparedness Guides**: Comprehensive earthquake safety information
+- ** Emergency Resources**: Quick access to emergency contacts and resources
+- ** Dark Mode Support**: Beautiful light and dark theme toggle
+- ** Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
 
 ## Tech Stack
 
@@ -92,19 +92,19 @@ src/
 
 ## Features Details
 
-### 🌍 Real-time Earthquake Monitoring
+### Real-time Earthquake Monitoring
 - Fetches live data from USGS every 10 minutes
 - Displays earthquakes with magnitude 2.5+
 - Shows location, magnitude, depth, and timestamp
 - Automatic data refresh with error handling
 
-### 🗺️ Interactive Map
+### Interactive Map
 - Built with Leaflet and React Leaflet
 - Color-coded markers by earthquake magnitude
 - Clickable markers with detailed information
 - Responsive map controls
 
-### 📚 Comprehensive Guides
+### Comprehensive Guides
 - Before earthquake preparedness
 - During earthquake safety (Drop, Cover, Hold On)
 - After earthquake response
@@ -112,7 +112,7 @@ src/
 - Building safety tips
 - Community preparedness
 
-### 🆘 Emergency Resources
+### Emergency Resources
 - Emergency hotline numbers
 - Government agency links
 - Local resource information
