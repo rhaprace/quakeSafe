@@ -1,28 +1,11 @@
-/**
- * Emergency Finder map configuration
- */
-
 import { Icon } from 'leaflet';
 
-/**
- * Default map center for Philippines
- */
 export const DEFAULT_MAP_CENTER: [number, number] = [12.8797, 121.7740];
 
-/**
- * Default map zoom level
- */
 export const DEFAULT_MAP_ZOOM = 6;
 
-/**
- * Selected city zoom level
- */
 export const CITY_ZOOM_LEVEL = 12;
 
-/**
- * Creates an emergency marker icon
- * @returns Leaflet Icon instance
- */
 export const createEmergencyIcon = (): Icon => {
   return new Icon({
     iconUrl: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNCIgZmlsbD0iI2VmNDQ0NCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjE4IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSI+8J+TjTwvdGV4dD48L3N2Zz4=',
@@ -31,4 +14,3 @@ export const createEmergencyIcon = (): Icon => {
     popupAnchor: [0, -32],
   });
 };
-

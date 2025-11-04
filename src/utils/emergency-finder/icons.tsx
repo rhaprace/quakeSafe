@@ -1,15 +1,6 @@
-/**
- * Emergency Finder icon mapping utilities
- */
-
 import { Phone, Hospital, Shield, AlertTriangle } from 'lucide-react';
 import type { EmergencyContactType } from '@/types/emergency-finder';
 
-/**
- * Maps emergency contact type to appropriate icon
- * @param type - The emergency contact type
- * @returns React icon component
- */
 export const getContactIcon = (type: EmergencyContactType): React.ReactNode => {
   switch (type) {
     case 'HOSPITAL':

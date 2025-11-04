@@ -1,4 +1,3 @@
-
 import type { EmergencyContactType } from '@/types/emergency-finder';
 export const getContactColor = (type: EmergencyContactType): string => {
   switch (type) {
