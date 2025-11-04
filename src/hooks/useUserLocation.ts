@@ -15,8 +15,9 @@ export const useUserLocation = (enabled: boolean = true) => {
     queryKey: ['user-location'],
     queryFn: geolocationAPI.getUserLocation,
     enabled,
-    staleTime: 60 * 60 * 1000, // 1 hour
-    retry: 2,
+    staleTime: 5 * 60 * 1000,
+    retry: 3,
+    retryDelay: attemptIndex => Math.min(1000 * 2 ** attemptIndex, 30000),
   });
 };
 
@@ -26,9 +27,9 @@ export const useBrowserLocation = () => {
     queryFn: geolocationAPI.getBrowserLocation,
     enabled: false,
     staleTime: 5 * 60 * 1000,
-    retry: 1,
+    retry: 3,
+    retryDelay: attemptIndex => Math.min(1000 * 2 ** attemptIndex, 30000),
   });
 };
 
 export default useUserLocation;
-

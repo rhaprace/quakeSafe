@@ -5,10 +5,6 @@ interface BeforeInstallPromptEvent extends Event {
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
 }
 
-/**
- * Hook to handle PWA installation
- * @returns Object with install prompt state and handler
- */
 export const usePWAInstall = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [isInstallable, setIsInstallable] = useState(false);
@@ -19,11 +15,13 @@ export const usePWAInstall = () => {
       setIsInstalled(true);
       return;
     }
+
     const handleBeforeInstallPrompt = (e: Event) => {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
       setIsInstallable(true);
     };
+
     const handleAppInstalled = () => {
       setIsInstalled(true);
       setIsInstallable(false);
@@ -45,7 +43,7 @@ export const usePWAInstall = () => {
     }
 
     await deferredPrompt.prompt();
- 
+
     const { outcome } = await deferredPrompt.userChoice;
 
     setDeferredPrompt(null);
@@ -63,7 +61,7 @@ export const usePWAInstall = () => {
     if (!isInstallable || isInstalled) {
       return false;
     }
-    
+
     const dismissedAt = localStorage.getItem('pwa-install-dismissed');
     if (dismissedAt) {
       const daysSinceDismissal = (Date.now() - parseInt(dismissedAt)) / (1000 * 60 * 60 * 24);
@@ -85,4 +83,3 @@ export const usePWAInstall = () => {
 };
 
 export default usePWAInstall;
-

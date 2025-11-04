@@ -1,23 +1,16 @@
 export const API_ENDPOINTS = {
-  // Earthquake Data
   USGS: 'https://earthquake.usgs.gov/fdsnws/event/1/query',
   USGS_GEOJSON: 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary',
-  
-  // Regional Earthquake APIs
   PHIVOLCS: 'https://earthquake.phivolcs.dost.gov.ph/2010EQLatest/LatestEarthquake.html',
-  JMA: 'https://www.jma.go.jp/bosai/quake/data/list.json', // Japan Meteorological Agency
-  EMSC: 'https://www.seismicportal.eu/fdsnws/event/1/query', // European-Mediterranean
-  
-  // Weather & Climate
+  JMA: 'https://www.jma.go.jp/bosai/quake/data/list.json',
+  EMSC: 'https://www.seismicportal.eu/fdsnws/event/1/query',
+
   OPEN_WEATHER: 'https://api.openweathermap.org/data/2.5',
-  
-  // News & Alerts
+
   NEWS_API: 'https://newsapi.org/v2',
-  
-  // Tsunami Warnings
+
   NOAA_TSUNAMI: 'https://www.tsunami.gov/events/xml/PHEBxml.xml',
-  
-  // Geolocation
+
   IP_GEOLOCATION: 'https://ipapi.co/json',
 } as const;
 
@@ -41,16 +34,17 @@ export interface USGSQueryParams {
   offset?: number;
   orderby?: 'time' | 'time-asc' | 'magnitude' | 'magnitude-asc';
 }
+
 //eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const buildQueryString = (params: Record<string, any>): string => {
   const queryParams = new URLSearchParams();
-  
+
   Object.entries(params).forEach(([key, value]) => {
     if (value !== undefined && value !== null) {
       queryParams.append(key, String(value));
     }
   });
-  
+
   return queryParams.toString();
 };
 
@@ -62,15 +56,15 @@ export const usgsAPI = {
       minmagnitude: 2.5,
       orderby: 'time',
     };
-    
+
     const queryString = buildQueryString({ ...defaultParams, ...params });
     const url = `${API_ENDPOINTS.USGS}?${queryString}`;
-    
+
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error(`USGS API Error: ${response.status} ${response.statusText}`);
     }
-    
+
     return response.json();
   },
   getNearbyEarthquakes: async (
@@ -96,7 +90,7 @@ export const usgsAPI = {
   getRecentEarthquakes: async (hours: number = 24) => {
     const endtime = new Date();
     const starttime = new Date(endtime.getTime() - hours * 60 * 60 * 1000);
-    
+
     return usgsAPI.getEarthquakes({
       starttime: starttime.toISOString(),
       endtime: endtime.toISOString(),
@@ -163,10 +157,10 @@ export const regionalAPI = {
       limit: 50,
       minmag: 2.5,
     };
-    
+
     const queryString = buildQueryString({ ...defaultParams, ...params });
     const url = `${API_ENDPOINTS.EMSC}?${queryString}`;
-    
+
     try {
       const response = await fetch(url);
       if (!response.ok) {
@@ -184,7 +178,7 @@ export const statisticsAPI = {
   getStatistics: async (days: number = 30) => {
     const endtime = new Date();
     const starttime = new Date(endtime.getTime() - days * 24 * 60 * 60 * 1000);
-    
+
     const data = await usgsAPI.getEarthquakes({
       starttime: starttime.toISOString(),
       endtime: endtime.toISOString(),
@@ -193,7 +187,7 @@ export const statisticsAPI = {
     const features = data.features || [];
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const magnitudes = features.map((f: any) => f.properties.mag);
-    
+
     return {
       total: features.length,
       averageMagnitude: magnitudes.reduce((a: number, b: number) => a + b, 0) / magnitudes.length || 0,
@@ -218,4 +212,3 @@ export default {
   regional: regionalAPI,
   statistics: statisticsAPI,
 };
-

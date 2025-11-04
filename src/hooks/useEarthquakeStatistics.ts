@@ -15,18 +15,15 @@ interface EarthquakeStatistics {
   };
 }
 
-/**
- * Hook to fetch earthquake statistics for a time period
- */
 export const useEarthquakeStatistics = (days: number = 30) => {
   return useQuery<EarthquakeStatistics>({
     queryKey: ['earthquake-statistics', days],
     queryFn: () => statisticsAPI.getStatistics(days),
-    staleTime: 30 * 60 * 1000, // 30 minutes
-    refetchInterval: 60 * 60 * 1000, // 1 hour
+    staleTime: 5 * 60 * 1000,
+    refetchInterval: 10 * 60 * 1000,
     retry: 3,
+    retryDelay: attemptIndex => Math.min(1000 * 2 ** attemptIndex, 30000),
   });
 };
 
 export default useEarthquakeStatistics;
-

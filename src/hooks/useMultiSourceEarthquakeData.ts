@@ -192,17 +192,13 @@ const fetchMultiSourceEarthquakes = async (): Promise<EarthquakeResponse> => {
   }
 };
 
-/**
- * Hook to fetch earthquake data from multiple sources
- * Combines USGS, GeoNet (NZ), and BMKG (Indonesia) for better coverage
- */
 export const useMultiSourceEarthquakeData = () => {
   return useQuery<EarthquakeResponse>({
     queryKey: ['earthquakes', 'multi-source'],
     queryFn: fetchMultiSourceEarthquakes,
     staleTime: 5 * 60 * 1000,
     refetchInterval: 10 * 60 * 1000,
-    retry: 2,
+    retry: 3,
     retryDelay: attemptIndex => Math.min(1000 * 2 ** attemptIndex, 30000),
   });
 };

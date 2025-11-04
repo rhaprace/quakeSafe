@@ -38,7 +38,6 @@ const Terms = () => {
 
         <div className="bg-background/50 backdrop-blur-sm rounded-lg border overflow-hidden">
           <div className="grid md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x">
-            {/* Sidebar Navigation */}
             <div className="md:col-span-1 p-4 bg-muted/20">
               <nav className="space-y-1">
                 {sections.map((section) => (
@@ -56,8 +55,6 @@ const Terms = () => {
                 ))}
               </nav>
             </div>
-
-            {/* Content Area */}
             <div className="md:col-span-2 p-6 max-h-[600px] overflow-y-auto">
               {openSection === 'introduction' && (
                 <div>
@@ -194,4 +191,3 @@ const Terms = () => {
 };
 
 export default Terms;
-
