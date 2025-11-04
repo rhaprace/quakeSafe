@@ -55,9 +55,6 @@ export interface EarthquakeResponse {
   features: EarthquakeFeature[];
 }
 
-/**
- * Hook to fetch earthquake data with optional custom parameters
- */
 export const useEarthquakeData = (params?: USGSQueryParams) => {
   return useQuery<EarthquakeResponse>({
     queryKey: ['earthquakes', params],
@@ -69,9 +66,6 @@ export const useEarthquakeData = (params?: USGSQueryParams) => {
   });
 };
 
-/**
- * Hook to fetch significant earthquakes (magnitude 4.5+)
- */
 export const useSignificantEarthquakes = () => {
   return useQuery<EarthquakeResponse>({
     queryKey: ['earthquakes', 'significant'],
@@ -82,9 +76,6 @@ export const useSignificantEarthquakes = () => {
   });
 };
 
-/**
- * Hook to fetch recent earthquakes by time range
- */
 export const useRecentEarthquakes = (hours: number = 24) => {
   return useQuery<EarthquakeResponse>({
     queryKey: ['earthquakes', 'recent', hours],
