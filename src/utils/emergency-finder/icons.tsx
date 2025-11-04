@@ -1,18 +1,24 @@
+import type { LucideIcon } from 'lucide-react';
 import { Phone, Hospital, Shield, AlertTriangle } from 'lucide-react';
 import type { EmergencyContactType } from '@/types/emergency-finder';
 
-export const getContactIcon = (type: EmergencyContactType): React.ReactNode => {
+export const getContactIconComponent = (type: EmergencyContactType): LucideIcon => {
   switch (type) {
     case 'HOSPITAL':
-      return <Hospital className="h-4 w-4" />;
+      return Hospital;
     case 'FIRE':
-      return <AlertTriangle className="h-4 w-4" />;
+      return AlertTriangle;
     case 'POLICE':
-      return <Shield className="h-4 w-4" />;
+      return Shield;
     case 'DISASTER':
-      return <AlertTriangle className="h-4 w-4" />;
+      return AlertTriangle;
     default:
-      return <Phone className="h-4 w-4" />;
+      return Phone;
   }
+};
+
+export const getContactIcon = (type: EmergencyContactType, className: string = 'h-4 w-4'): React.ReactNode => {
+  const Icon = getContactIconComponent(type);
+  return <Icon className={className} />;
 };
 

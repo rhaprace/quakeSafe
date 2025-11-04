@@ -1,8 +1,3 @@
-/**
- * Common components barrel export
- * Provides centralized imports for all common UI components
- */
-
 export { SectionHeader } from './SectionHeader';
 export { InfoCard } from './InfoCard';
 export { FeatureCard } from './FeatureCard';
@@ -15,4 +10,5 @@ export { ResponsiveGrid } from './ResponsiveGrid';
 export { IconListItem } from './IconListItem';
 export { InfoBox } from './InfoBox';
 export { TabNavigation } from './TabNavigation';
+export { EmergencyTypeBadge } from './EmergencyTypeBadge';
 
