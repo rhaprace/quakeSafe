@@ -78,8 +78,8 @@ define(['./workbox-f969db16'], (function (workbox) { 'use strict';
    * See https://goo.gl/S9QRab
    */
   workbox.precacheAndRoute([{
-    "url": "registerSW.js",
-    "revision": "3ca0b8505b4bec776b69afdba2768812"
+    "url": "suppress-warnings.js",
+    "revision": "d41d8cd98f00b204e9800998ecf8427e"
   }], {});
   workbox.cleanupOutdatedCaches();
   workbox.registerRoute(/^https:\/\/earthquake\.usgs\.gov\/.*$/i, new workbox.NetworkFirst({

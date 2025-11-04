@@ -1,41 +1,43 @@
-export const preparednessCards = [
-    {
-      title: 'Before an Earthquake',
-      description: 'Prepare your home and family for potential earthquakes',
-      link: '/guides',
-      number: '01',
-    },
-    {
-      title: 'During an Earthquake',
-      description: 'Know what to do when the ground starts shaking',
-      link: '/guides',
-      number: '02',
-    },
-    {
-      title: 'After an Earthquake',
-      description: 'Steps to take once the shaking has stopped',
-      link: '/guides',
-      number: '03',
-    },
-    {
-      title: 'Emergency Kit',
-      description: 'Essential supplies every household should have',
-      link: '/guides',
-      number: '04',
-    },
-  ];
+import type { NumberedCard, FeatureCard } from '@/types/common';
+import type { TFunction } from 'i18next';
 
-export const features = [
-    {
-      title: 'Live Earthquake Tracking',
-      description: 'Real-time data from USGS monitoring stations worldwide',
-    },
-    {
-      title: 'Safety Guidelines',
-      description: 'Expert-approved preparedness and response strategies',
-    },
-    {
-      title: 'Emergency Resources',
-      description: 'Quick access to critical contacts and support services',
-    },
-  ];
+export const getPreparednessCards = (t: TFunction): NumberedCard[] => [
+  {
+    title: t('preparedness.before.title'),
+    description: t('preparedness.before.description'),
+    link: '/guides',
+    number: '01',
+  },
+  {
+    title: t('preparedness.during.title'),
+    description: t('preparedness.during.description'),
+    link: '/guides',
+    number: '02',
+  },
+  {
+    title: t('preparedness.after.title'),
+    description: t('preparedness.after.description'),
+    link: '/guides',
+    number: '03',
+  },
+  {
+    title: t('preparedness.kit.title'),
+    description: t('preparedness.kit.description'),
+    link: '/guides',
+    number: '04',
+  },
+];
+export const getFeatures = (t: TFunction): FeatureCard[] => [
+  {
+    title: t('features.realtime.title'),
+    description: t('features.realtime.description'),
+  },
+  {
+    title: t('features.interactive.title'),
+    description: t('features.interactive.description'),
+  },
+  {
+    title: t('features.preparedness.title'),
+    description: t('features.preparedness.description'),
+  },
+];

@@ -1,49 +1,31 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from 'react-i18next';
+import { SectionHeader, FeatureCard, NumberedCard, StatCard, InfoBox, ResponsiveGrid } from '@/components/common';
+import { getFeatures, getPreparednessCards } from '@/utils/home';
+import type { StatData } from '@/types/common';
 
-const Home = () => {
+const Home: React.FC = () => {
   const { t } = useTranslation('home');
 
-  const features = [
-    {
-      title: t('features.realtime.title'),
-      description: t('features.realtime.description'),
-    },
-    {
-      title: t('features.interactive.title'),
-      description: t('features.interactive.description'),
-    },
-    {
-      title: t('features.preparedness.title'),
-      description: t('features.preparedness.description'),
-    },
-  ];
+  const features = getFeatures(t);
+  const preparednessCards = getPreparednessCards(t);
 
-  const preparednessCards = [
+  const stats: StatData[] = [
     {
-      title: t('preparedness.before.title'),
-      description: t('preparedness.before.description'),
-      link: '/guides',
-      number: '01',
+      value: t('stats.monitored.value'),
+      label: t('stats.monitored.label'),
+      description: t('stats.monitored.description'),
     },
     {
-      title: t('preparedness.during.title'),
-      description: t('preparedness.during.description'),
-      link: '/guides',
-      number: '02',
+      value: t('stats.daily.value'),
+      label: t('stats.daily.label'),
+      description: t('stats.daily.description'),
     },
     {
-      title: t('preparedness.after.title'),
-      description: t('preparedness.after.description'),
-      link: '/guides',
-      number: '03',
-    },
-    {
-      title: t('preparedness.kit.title'),
-      description: t('preparedness.kit.description'),
-      link: '/guides',
-      number: '04',
+      value: t('stats.coverage.value'),
+      label: t('stats.coverage.label'),
+      description: t('stats.coverage.description'),
     },
   ];
 
@@ -73,96 +55,65 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       <section className="py-16 lg:py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="grid gap-px md:grid-cols-3 bg-border rounded-lg overflow-hidden">
             {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-background p-8 lg:p-10"
-              >
-                <div className="mb-4">
-                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-md border bg-background font-mono text-sm font-semibold">
-                    {String(index + 1).padStart(2, '0')}
-                  </div>
-                </div>
-                <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
+              <div key={index} className="bg-background p-8 lg:p-10">
+                <FeatureCard
+                  title={feature.title}
+                  description={feature.description}
+                  index={index}
+                />
               </div>
             ))}
           </div>
         </div>
       </section>
+
       <section className="py-16 lg:py-20 border-y">
         <div className="container mx-auto px-4">
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-3">
-              {t('preparedness.title')}
-            </h2>
-            <p className="text-muted-foreground max-w-2xl">
-              {t('preparedness.subtitle')}
-            </p>
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <SectionHeader
+            title={t('preparedness.title')}
+            subtitle={t('preparedness.subtitle')}
+            size="md"
+            className="mb-12"
+          />
+          <ResponsiveGrid cols={{ sm: 2, lg: 4 }}>
             {preparednessCards.map((card, index) => (
-              <Link
+              <NumberedCard
                 key={index}
-                to={card.link}
-                className="group block border rounded-lg p-6 hover:border-primary hover:bg-muted/50 transition-all"
-              >
-                <div className="mb-4 flex items-center justify-between">
-                  <div className="flex h-8 w-8 items-center justify-center rounded border bg-background font-mono text-xs font-semibold">
-                    {card.number}
-                  </div>
-                  <div className="text-xs font-medium text-muted-foreground group-hover:text-primary transition-colors">
-                    →
-                  </div>
-                </div>
-                <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors">
-                  {card.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {card.description}
-                </p>
-              </Link>
+                title={card.title}
+                description={card.description}
+                number={card.number}
+                link={card.link}
+              />
             ))}
-          </div>
+          </ResponsiveGrid>
         </div>
       </section>
       <section className="py-16 lg:py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
             <div className="grid gap-px sm:grid-cols-3 bg-border rounded-lg overflow-hidden">
-              <div className="bg-background p-8 text-center">
-                <div className="mb-3">
-                  <div className="text-3xl font-bold tracking-tight">{t('stats.monitored.value')}</div>
-                </div>
-                <div className="text-sm font-medium mb-1">{t('stats.monitored.label')}</div>
-                <div className="text-xs text-muted-foreground">{t('stats.monitored.description')}</div>
-              </div>
-              <div className="bg-background p-8 text-center">
-                <div className="mb-3">
-                  <div className="text-3xl font-bold tracking-tight">{t('stats.daily.value')}</div>
-                </div>
-                <div className="text-sm font-medium mb-1">{t('stats.daily.label')}</div>
-                <div className="text-xs text-muted-foreground">{t('stats.daily.description')}</div>
-              </div>
-              <div className="bg-background p-8 text-center">
-                <div className="mb-3">
-                  <div className="text-3xl font-bold tracking-tight">{t('stats.coverage.value')}</div>
-                </div>
-                <div className="text-sm font-medium mb-1">{t('stats.coverage.label')}</div>
-                <div className="text-xs text-muted-foreground">{t('stats.coverage.description')}</div>
-              </div>
+              {stats.map((stat, index) => (
+                <StatCard
+                  key={index}
+                  value={stat.value}
+                  label={stat.label}
+                  description={stat.description}
+                />
+              ))}
             </div>
           </div>
         </div>
       </section>
+
       <section className="py-16 lg:py-20 border-t">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
-            <div className="rounded-lg border bg-muted/50 p-8 lg:p-12 text-center">
+            <InfoBox variant="muted" className="p-8 lg:p-12 text-center">
               <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-4">
                 {t('cta.title')}
               </h2>
@@ -177,7 +128,7 @@ const Home = () => {
                   <Link to="/resources">{t('buttons.emergencyResources', { ns: 'common' })}</Link>
                 </Button>
               </div>
-            </div>
+            </InfoBox>
           </div>
         </div>
       </section>

@@ -3,7 +3,6 @@ import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 import path from 'path'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
@@ -45,6 +44,7 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2}'],
+        mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/earthquake\.usgs\.gov\/.*$/i,
@@ -94,7 +94,8 @@ export default defineConfig({
       },
       devOptions: {
         enabled: true,
-        type: 'module'
+        type: 'module',
+        suppressWarnings: true
       }
     })
   ],
@@ -107,23 +108,18 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks(id) {
-          // React and React ecosystem
           if (id.includes('node_modules/react') || id.includes('node_modules/react-dom') || id.includes('node_modules/react-router')) {
             return 'react-vendor';
           }
-          // React Query
           if (id.includes('node_modules/@tanstack/react-query')) {
             return 'query-vendor';
           }
-          // UI libraries (Radix UI, Lucide)
           if (id.includes('node_modules/@radix-ui') || id.includes('node_modules/lucide-react')) {
             return 'ui-vendor';
           }
-          // Map libraries (Leaflet)
           if (id.includes('node_modules/leaflet') || id.includes('node_modules/react-leaflet')) {
             return 'map-vendor';
           }
-          // i18n libraries
           if (id.includes('node_modules/i18next') || id.includes('node_modules/react-i18next')) {
             return 'i18n-vendor';
           }

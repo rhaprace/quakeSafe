@@ -13,10 +13,12 @@ export const PWAUpdatePrompt = () => {
     updateServiceWorker,
   } = useRegisterSW({
     onRegistered(r: ServiceWorkerRegistration | undefined) {
-      console.log('SW Registered:', r);
+      if (import.meta.env.DEV) {
+        console.log('SW Registered:', r);
+      }
     },
     onRegisterError(error: Error) {
-      console.log('SW registration error', error);
+      console.error('SW registration error', error);
     },
   });
 
