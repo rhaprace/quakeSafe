@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { SEO } from '@/components/SEO';
+import { getPrivacySEO } from '@/utils/seo';
 
 const Privacy = () => {
   const { t } = useTranslation('privacy');
@@ -23,7 +25,9 @@ const Privacy = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-muted/30 via-background to-muted/20">
+    <>
+      <SEO {...getPrivacySEO()} />
+      <div className="min-h-screen bg-gradient-to-br from-muted/30 via-background to-muted/20">
       <div className="container mx-auto px-4 py-6 max-w-5xl">
         <div className="mb-6">
           <h1 className="text-2xl lg:text-3xl font-bold tracking-tight mb-2">
@@ -173,6 +177,7 @@ const Privacy = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

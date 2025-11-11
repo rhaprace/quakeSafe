@@ -1,7 +1,9 @@
 import { dataSources } from '@/utils/about';
 import { useTranslation } from 'react-i18next';
 import { useLocaleStore } from '@/store/localeStore';
+import { SEO } from '@/components/SEO';
 import { SectionHeader, FeatureCard, ExternalLinkCard, InfoBox, ResponsiveGrid } from '@/components/common';
+import { getAboutSEO } from '@/utils/seo';
 import type { FeatureCard as FeatureCardType } from '@/types/common';
 
 const About: React.FC = () => {
@@ -28,7 +30,9 @@ const About: React.FC = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-12 lg:py-16">
+    <>
+      <SEO {...getAboutSEO()} />
+      <div className="container mx-auto px-4 py-12 lg:py-16">
       <SectionHeader
         title={t('title')}
         subtitle={t('subtitle')}
@@ -128,6 +132,7 @@ const About: React.FC = () => {
         </section>
       </div>
     </div>
+    </>
   );
 };
 

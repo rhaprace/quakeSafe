@@ -1,7 +1,9 @@
 import { useLocaleStore } from '@/store/localeStore';
 import { useTranslation } from 'react-i18next';
+import { SEO } from '@/components/SEO';
 import { SectionHeader, ExternalLinkCard, InfoCard, IconListItem, TypeTag, ResponsiveGrid } from '@/components/common';
 import { getLocalResources, getVolunteerOrganizations } from '@/utils/resources';
+import { getResourcesSEO } from '@/utils/seo';
 
 const Resources: React.FC = () => {
   const { countryConfig } = useLocaleStore();
@@ -11,7 +13,9 @@ const Resources: React.FC = () => {
   const volunteerOrganizations = getVolunteerOrganizations(t);
 
   return (
-    <div className="container mx-auto px-4 py-12 lg:py-16">
+    <>
+      <SEO {...getResourcesSEO()} />
+      <div className="container mx-auto px-4 py-12 lg:py-16">
       <SectionHeader
         title={t('title')}
         subtitle={t('subtitle')}
@@ -111,6 +115,7 @@ const Resources: React.FC = () => {
         </section>
       </div>
     </div>
+    </>
   );
 };
 

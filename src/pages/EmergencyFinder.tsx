@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { Hospital, MapPin } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 import {
   philippinesCities,
   searchCities,
@@ -17,6 +18,7 @@ import {
   EmergencyDisclaimerBox,
   MapViewController,
 } from '@/components/emergency-finder';
+import { getEmergencyFinderSEO } from '@/utils/seo';
 import 'leaflet/dist/leaflet.css';
 
 const emergencyIcon = createEmergencyIcon();
@@ -41,10 +43,12 @@ const EmergencyFinder: React.FC = () => {
   const searchResults = searchQuery ? searchCities(searchQuery) : [];
 
   return (
-    <div className="h-screen flex flex-col">
-      <div className="bg-background border-b px-4 py-4 lg:px-6">
-        <div className="container mx-auto">
-          <h1 className="text-2xl font-bold mb-2">Regional Emergency Finder</h1>
+    <>
+      <SEO {...getEmergencyFinderSEO()} />
+      <div className="h-screen flex flex-col">
+        <div className="bg-background border-b px-4 py-4 lg:px-6">
+          <div className="container mx-auto">
+            <h1 className="text-2xl font-bold mb-2">Regional Emergency Finder</h1>
           <p className="text-sm text-muted-foreground">
             Click on any city marker on the map to view local emergency resources
           </p>
@@ -155,7 +159,8 @@ const EmergencyFinder: React.FC = () => {
           </div>
         )}
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

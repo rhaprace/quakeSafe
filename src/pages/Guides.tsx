@@ -1,6 +1,8 @@
 import { useState, useMemo } from 'react';
+import { SEO } from '@/components/SEO';
 import { getPreparednessGuides } from '@/utils/guide';
 import { useTranslation } from 'react-i18next';
+import { getGuidesSEO } from '@/utils/seo';
 
 const Guides = () => {
   const { t } = useTranslation('guides');
@@ -13,7 +15,9 @@ const Guides = () => {
     preparednessGuides[0];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-muted/30 via-background to-muted/20">
+    <>
+      <SEO {...getGuidesSEO()} />
+      <div className="min-h-screen bg-gradient-to-br from-muted/30 via-background to-muted/20">
       <div className="container mx-auto px-4 py-8 lg:py-12">
         <div className="mb-8 lg:mb-12">
           <h1 className="text-3xl lg:text-4xl font-bold tracking-tight mb-3">
@@ -83,6 +87,7 @@ const Guides = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

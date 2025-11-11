@@ -1,12 +1,16 @@
 import { WifiOff, BookOpen, AlertTriangle, RefreshCw } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { SEO } from '@/components/SEO';
 import { InfoBox, IconListItem } from '@/components/common';
 import { refreshPage } from '@/utils/offline';
+import { getOfflineSEO } from '@/utils/seo';
 
 const Offline: React.FC = () => {
   return (
-    <div className="container mx-auto px-4 py-16">
+    <>
+      <SEO {...getOfflineSEO()} />
+      <div className="container mx-auto px-4 py-16">
       <div className="mx-auto max-w-2xl text-center">
         <div className="mb-8 flex justify-center">
           <div className="rounded-full bg-amber-100 p-6 dark:bg-amber-900/20">
@@ -74,6 +78,7 @@ const Offline: React.FC = () => {
         </InfoBox>
       </div>
     </div>
+    </>
   );
 };
 

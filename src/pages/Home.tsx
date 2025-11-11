@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from 'react-i18next';
+import { SEO } from '@/components/SEO';
 import { SectionHeader, FeatureCard, NumberedCard, StatCard, InfoBox, ResponsiveGrid } from '@/components/common';
 import { getFeatures, getPreparednessCards } from '@/utils/home';
+import { getHomeSEO } from '@/utils/seo';
 import type { StatData } from '@/types/common';
 
 const Home: React.FC = () => {
@@ -30,31 +32,33 @@ const Home: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      <section className="border-b">
-        <div className="container mx-auto px-4 py-20 sm:py-28 lg:py-36">
-          <div className="mx-auto max-w-3xl">
-            <div className="mb-8 inline-flex items-center gap-2 rounded-md border bg-muted/50 px-3 py-1.5 text-sm font-medium">
-              <div className="h-2 w-2 rounded-full bg-primary animate-pulse"></div>
-              <span>{t('hero.badge')}</span>
-            </div>
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl mb-6 text-balance">
-              {t('hero.title')}
-            </h1>
-            <p className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-2xl">
-              {t('hero.subtitle')}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Button asChild size="lg" className="font-semibold">
-                <Link to="/tracker">{t('buttons.viewLiveTracker', { ns: 'common' })}</Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="font-semibold">
-                <Link to="/guides">{t('buttons.safetyGuidelines', { ns: 'common' })}</Link>
-              </Button>
+    <>
+      <SEO {...getHomeSEO()} />
+      <div className="min-h-screen">
+        <section className="border-b">
+          <div className="container mx-auto px-4 py-20 sm:py-28 lg:py-36">
+            <div className="mx-auto max-w-3xl">
+              <div className="mb-8 inline-flex items-center gap-2 rounded-md border bg-muted/50 px-3 py-1.5 text-sm font-medium">
+                <div className="h-2 w-2 rounded-full bg-primary animate-pulse"></div>
+                <span>{t('hero.badge')}</span>
+              </div>
+              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl mb-6 text-balance">
+                {t('hero.title')}
+              </h1>
+              <p className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-2xl">
+                {t('hero.subtitle')}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Button asChild size="lg" className="font-semibold">
+                  <Link to="/tracker">{t('buttons.viewLiveTracker', { ns: 'common' })}</Link>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="font-semibold">
+                  <Link to="/guides">{t('buttons.safetyGuidelines', { ns: 'common' })}</Link>
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       <section className="py-16 lg:py-20 bg-muted/30">
         <div className="container mx-auto px-4">
@@ -133,6 +137,7 @@ const Home: React.FC = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Skeleton } from '@/components/ui/skeleton';
+import { SEO } from '@/components/SEO';
 import EarthquakeMap from '@/components/EarthquakeMap';
 import EarthquakeCard from '@/components/EarthquakeCard';
 import { type EarthquakeFeature } from '@/hooks/useEarthquakeData';
@@ -8,6 +9,7 @@ import { useMultiSourceEarthquakeData } from '@/hooks/useMultiSourceEarthquakeDa
 import { RefreshCw, MapPin, List, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from 'react-i18next';
+import { getTrackerSEO } from '@/utils/seo';
 
 const Tracker = () => {
   const { t } = useTranslation('tracker');
@@ -26,26 +28,31 @@ const Tracker = () => {
 
   if (error) {
     return (
-      <div className="container mx-auto px-4 py-8">
-        <Alert variant="destructive">
-          <AlertDescription>
-            {t('error')}
-            <Button
-              onClick={handleRefresh}
-              variant="outline"
-              size="sm"
-              className="ml-2"
-            >
-              {t('common:buttons.retry')}
-            </Button>
-          </AlertDescription>
-        </Alert>
-      </div>
+      <>
+        <SEO {...getTrackerSEO()} />
+        <div className="container mx-auto px-4 py-8">
+          <Alert variant="destructive">
+            <AlertDescription>
+              {t('error')}
+              <Button
+                onClick={handleRefresh}
+                variant="outline"
+                size="sm"
+                className="ml-2"
+              >
+                {t('common:buttons.retry')}
+              </Button>
+            </AlertDescription>
+          </Alert>
+        </div>
+      </>
     );
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <>
+      <SEO {...getTrackerSEO()} />
+      <div className="container mx-auto px-4 py-8">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">{t('title')}</h1>
@@ -167,6 +174,7 @@ const Tracker = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 
