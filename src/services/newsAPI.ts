@@ -47,46 +47,29 @@ class RateLimiter {
 const rateLimiter = new RateLimiter();
 
 export const newsAPI = {
- 
-  getEarthquakeNews: async (
-    apiKey: string,
-    pageSize: number = 20,
-    page: number = 1
-  ): Promise<NewsArticle[]> => {
-    if (!apiKey || apiKey === 'YOUR_NEWS_API_KEY') {
-      console.warn('NewsAPI key not configured. Using fallback data.');
-      return [];
-    }
 
+  getEarthquakeNews: async (
+    pageSize: number = 20
+  ): Promise<NewsArticle[]> => {
     try {
       await rateLimiter.throttle();
 
-      const params = new URLSearchParams({
-        q: 'earthquake OR seismic OR tremor',
-        language: 'en',
-        sortBy: 'publishedAt',
-        pageSize: String(pageSize),
-        page: String(page),
-        apiKey: apiKey,
-      });
-
-      console.log('Fetching earthquake news from NewsAPI...');
-      const response = await fetch(`${API_ENDPOINTS.NEWS_API}/everything?${params}`);
+      console.log('Fetching earthquake news from serverless API...');
+      const response = await fetch(`/api/news?pageSize=${pageSize}`);
 
       if (!response.ok) {
-        if (response.status === 401) {
-          throw new Error('Invalid NewsAPI key. Get your free key at https://newsapi.org/');
-        }
-        if (response.status === 429) {
-          throw new Error('NewsAPI rate limit exceeded. Please try again later.');
-        }
-        throw new Error(`NewsAPI Error: ${response.status} ${response.statusText}`);
+        throw new Error(`API Error: ${response.status} ${response.statusText}`);
       }
 
-      const data: NewsAPIResponse = await response.json();
-      console.log(`Successfully fetched ${data.articles.length} articles from NewsAPI`);
+      const data = await response.json();
 
-      return data.articles.map((article, index) =>
+      if (!data.success) {
+        throw new Error(data.error || 'Failed to fetch news');
+      }
+
+      console.log(`Successfully fetched ${data.articles.length} articles`);
+
+      return data.articles.map((article: NewsAPIArticle, index: number) =>
         transformNewsAPIArticle(article, index)
       );
     } catch (error) {

@@ -5,29 +5,27 @@ import type { NewsArticle } from '@/types/news';
 
 interface UseNewsOptions {
   useRealAPI?: boolean;
-  apiKey?: string;
   pageSize?: number;
 }
 export const useNews = (options: UseNewsOptions = {}) => {
   const {
-    useRealAPI = false,
-    apiKey = import.meta.env.VITE_NEWS_API_KEY,
+    useRealAPI = true,
     pageSize = 20,
   } = options;
 
   return useQuery<NewsArticle[], Error>({
     queryKey: ['earthquake-news', useRealAPI, pageSize],
     queryFn: async () => {
-      if (!useRealAPI || !apiKey || apiKey === 'YOUR_NEWS_API_KEY') {
-        console.info('Using static news data. Set VITE_NEWS_API_KEY to use real news.');
+      if (!useRealAPI) {
+        console.info('Using static news data.');
         return newsArticles;
       }
 
       try {
-        const articles = await newsAPI.getEarthquakeNews(apiKey, pageSize);
+        const articles = await newsAPI.getEarthquakeNews(pageSize);
 
         if (articles.length === 0) {
-          console.warn('No articles from NewsAPI, using fallback data');
+          console.warn('No articles from API, using fallback data');
           return newsArticles;
         }
 
