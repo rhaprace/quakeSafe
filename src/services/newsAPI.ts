@@ -54,7 +54,6 @@ export const newsAPI = {
     try {
       await rateLimiter.throttle();
 
-      console.log('Fetching earthquake news from serverless API...');
       const response = await fetch(`/api/news?pageSize=${pageSize}`);
 
       if (!response.ok) {
@@ -67,13 +66,13 @@ export const newsAPI = {
         throw new Error(data.error || 'Failed to fetch news');
       }
 
-      console.log(`Successfully fetched ${data.articles.length} articles`);
-
       return data.articles.map((article: NewsAPIArticle, index: number) =>
         transformNewsAPIArticle(article, index)
       );
     } catch (error) {
-      console.error('Error fetching earthquake news:', error);
+      if (import.meta.env.DEV) {
+        console.error('Error fetching earthquake news:', error);
+      }
       throw error;
     }
   },

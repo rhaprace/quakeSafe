@@ -28,7 +28,6 @@ export default async function handler(
   const apiKey = process.env.NEWS_API_KEY;
 
   if (!apiKey) {
-    console.error('NEWS_API_KEY not configured');
     return res.status(500).json({ error: 'API key not configured' });
   }
 
@@ -63,8 +62,7 @@ export default async function handler(
       articles: data.articles,
       totalResults: data.totalResults,
     });
-  } catch (error) {
-    console.error('Error fetching news:', error);
+  } catch {
     res.status(500).json({
       success: false,
       error: 'Failed to fetch news',

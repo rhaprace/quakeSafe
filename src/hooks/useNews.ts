@@ -17,7 +17,6 @@ export const useNews = (options: UseNewsOptions = {}) => {
     queryKey: ['earthquake-news', useRealAPI, pageSize],
     queryFn: async () => {
       if (!useRealAPI) {
-        console.info('Using static news data.');
         return newsArticles;
       }
 
@@ -25,13 +24,14 @@ export const useNews = (options: UseNewsOptions = {}) => {
         const articles = await newsAPI.getEarthquakeNews(pageSize);
 
         if (articles.length === 0) {
-          console.warn('No articles from API, using fallback data');
           return newsArticles;
         }
 
         return articles;
       } catch (error) {
-        console.error('Error fetching news, using fallback data:', error);
+        if (import.meta.env.DEV) {
+          console.error('Error fetching news, using fallback data:', error);
+        }
         return newsArticles;
       }
     },
