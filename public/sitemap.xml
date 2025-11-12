@@ -36,6 +36,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- News -->
+  <url>
+    <loc>https://quakesafe-beta.vercel.app/news</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Emergency Finder -->
   <url>
     <loc>https://quakesafe-beta.vercel.app/emergency-finder</loc>

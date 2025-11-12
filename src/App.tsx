@@ -13,6 +13,7 @@ const Home = lazy(() => import('./pages/Home'));
 const Tracker = lazy(() => import('./pages/Tracker'));
 const Guides = lazy(() => import('./pages/Guides'));
 const Resources = lazy(() => import('./pages/Resources'));
+const News = lazy(() => import('./pages/News'));
 const About = lazy(() => import('./pages/About'));
 const EmergencyFinder = lazy(() => import('./pages/EmergencyFinder'));
 const Privacy = lazy(() => import('./pages/Privacy'));
@@ -61,6 +62,7 @@ function App() {
               <Route path="/tracker" element={<Tracker />} />
               <Route path="/guides" element={<Guides />} />
               <Route path="/resources" element={<Resources />} />
+              <Route path="/news" element={<News />} />
               <Route path="/emergency-finder" element={<EmergencyFinder />} />
               <Route path="/about" element={<About />} />
               <Route path="/privacy" element={<Privacy />} />

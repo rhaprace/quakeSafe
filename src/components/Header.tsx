@@ -19,9 +19,9 @@ const Header = () => {
     { name: t('navigation.tracker'), path: '/tracker' },
     { name: t('navigation.guides'), path: '/guides' },
     { name: t('navigation.resources'), path: '/resources' },
+    { name: t('navigation.news'), path: '/news' },
   ];
 
-  // Add Emergency Finder for Philippines only
   const navItems = countryCode === 'PH'
     ? [
         ...baseNavItems,

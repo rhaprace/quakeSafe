@@ -1,4 +1,5 @@
 import type { SEOProps } from '@/components/SEO';
+import type { NewsArticle } from '@/types/news';
 import {
   getWebApplicationSchema,
   getOrganizationSchema,
@@ -184,5 +185,54 @@ export const getOfflineSEO = (): SEOProps => ({
   description: 'You are currently offline. QuakeSafe works offline with cached data for emergency access.',
   noindex: true, // Don't index offline page
   nofollow: true,
+});
+
+export const getNewsSEO = (): SEOProps => ({
+  title: 'Earthquake News & Updates - Latest Safety Information & Research',
+  description: 'Stay informed with the latest earthquake news, safety tips, research findings, and community stories. Expert insights on earthquake preparedness and seismic activity.',
+  keywords: [
+    'earthquake news',
+    'seismic activity updates',
+    'earthquake safety news',
+    'earthquake research',
+    'disaster preparedness news',
+    'earthquake technology',
+    'community earthquake stories',
+  ],
+  canonicalUrl: 'https://quakesafe-beta.vercel.app/news',
+  ogType: 'website',
+  structuredData: [
+    getBreadcrumbSchema([
+      { name: 'Home', url: '/' },
+      { name: 'News', url: '/news' },
+    ]),
+  ],
+});
+
+export const getNewsArticleSEO = (article: NewsArticle): SEOProps => ({
+  title: `${article.title} - QuakeSafe News`,
+  description: article.excerpt,
+  keywords: [
+    ...article.tags,
+    'earthquake news',
+    'earthquake safety',
+    'seismic activity',
+  ],
+  canonicalUrl: `https://quakesafe-beta.vercel.app/news/${article.id}`,
+  ogType: 'article',
+  structuredData: [
+    getBreadcrumbSchema([
+      { name: 'Home', url: '/' },
+      { name: 'News', url: '/news' },
+      { name: article.title, url: `/news/${article.id}` },
+    ]),
+    getArticleSchema({
+      headline: article.title,
+      description: article.excerpt,
+      datePublished: article.datePublished,
+      dateModified: article.dateModified || article.datePublished,
+      author: article.author,
+    }),
+  ],
 });
 

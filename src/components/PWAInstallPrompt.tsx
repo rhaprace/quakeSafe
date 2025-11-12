@@ -2,13 +2,11 @@ import { useState, useEffect } from 'react';
 import { Download, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { usePWAInstall } from '@/hooks/usePWAInstall';
+import { useNotificationSound } from '@/hooks/useNotificationSound';
 
-/**
- * Subtle banner prompting users to install the PWA
- * Only shows if the app is installable and user hasn't dismissed recently
- */
 export const PWAInstallPrompt = () => {
   const { shouldShowPrompt, promptInstall, dismissPrompt } = usePWAInstall();
+  const { playNotificationSound } = useNotificationSound();
   const [isVisible, setIsVisible] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -17,10 +15,11 @@ export const PWAInstallPrompt = () => {
       const timer = setTimeout(() => {
         setIsVisible(true);
         setIsAnimating(true);
+        playNotificationSound();
       }, 3000);
       return () => clearTimeout(timer);
     }
-  }, [shouldShowPrompt]);
+  }, [shouldShowPrompt, playNotificationSound]);
 
   const handleInstall = async () => {
     const accepted = await promptInstall();
@@ -80,4 +79,3 @@ export const PWAInstallPrompt = () => {
 };
 
 export default PWAInstallPrompt;
-
